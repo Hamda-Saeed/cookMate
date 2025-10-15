@@ -1,16 +1,17 @@
-# CookMate Requirements - All FREE & Open Source
+# CookMate – Requirements (tested compatible versions)
 
 # Core NLP & RAG
 chromadb==0.4.22
-sentence-transformers==2.2.2
+sentence-transformers>=2.2.2,<3.0.0
+transformers>=4.44.0,<5.0.0
+tokenizers>=0.22.0,<0.24.0
 torch>=2.0.0
-transformers>=4.30.0
 
-# Speech Processing
+# Speech / Audio
 openai-whisper==20231117
 sounddevice==0.4.6
 scipy>=1.10.0
-numpy>=1.24.0
+numpy<2.0.0
 
 # Text-to-Speech
 gTTS==2.4.0
@@ -20,9 +21,7 @@ pygame>=2.5.0
 requests>=2.31.0
 python-dotenv>=1.0.0
 
-# Optional: For evaluation metrics
+# Optional / Extra
 jiwer>=3.0.0
-
-# Optional: For UI (Streamlit)
 streamlit>=1.29.0
 plotly>=5.18.0

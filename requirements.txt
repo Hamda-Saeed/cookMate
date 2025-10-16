@@ -1,7 +1,7 @@
-chromadb==0.4.24
+chromadb==0.4.22
 gTTS==2.4.0
 jiwer==4.0.0
-numpy==2.3.4
+numpy==1.26.4
 openai_whisper==20231117
 pandas==2.3.3
 plotly==6.3.1

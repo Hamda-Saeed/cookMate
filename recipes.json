@@ -1,0 +1,97 @@
+{
+  "pasta_carbonara": {
+    "name": "Classic Pasta Carbonara",
+    "prep_time": "10 minutes",
+    "cook_time": "20 minutes",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "400g spaghetti",
+      "200g pancetta or guanciale, diced",
+      "4 large eggs",
+      "100g Pecorino Romano cheese, grated",
+      "50g Parmesan cheese, grated",
+      "Freshly ground black pepper",
+      "Salt for pasta water"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Bring a large pot of salted water to a rolling boil. Add spaghetti and cook until al dente, about 8-10 minutes.",
+        "duration": "10 minutes",
+        "tips": "Save 1 cup of pasta water before draining!"
+      },
+      {
+        "step": 2,
+        "instruction": "While pasta cooks, heat a large pan over medium heat. Add diced pancetta and cook until golden and crispy.",
+        "duration": "5 minutes",
+        "tips": "No oil needed - pancetta has enough fat"
+      },
+      {
+        "step": 3,
+        "instruction": "In a bowl, whisk together eggs, Pecorino, Parmesan, and lots of black pepper until smooth and well combined.",
+        "duration": "2 minutes",
+        "tips": "Use room temperature eggs for best results"
+      },
+      {
+        "step": 4,
+        "instruction": "Drain pasta and immediately add to the pan with pancetta. Remove from heat.",
+        "duration": "1 minute",
+        "tips": "Work quickly while pasta is hot"
+      },
+      {
+        "step": 5,
+        "instruction": "Pour egg mixture over pasta and toss vigorously. Add pasta water gradually until creamy and silky.",
+        "duration": "2 minutes",
+        "tips": "Keep tossing to prevent scrambling. The residual heat cooks the eggs"
+      }
+    ]
+  },
+  "chocolate_chip_cookies": {
+    "name": "Perfect Chocolate Chip Cookies",
+    "prep_time": "15 minutes",
+    "cook_time": "12 minutes",
+    "servings": 24,
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 cups all-purpose flour",
+      "1 tsp baking soda",
+      "1 tsp salt",
+      "1 cup butter, softened",
+      "3/4 cup granulated sugar",
+      "3/4 cup brown sugar",
+      "2 large eggs",
+      "2 tsp vanilla extract",
+      "2 cups chocolate chips"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Preheat oven to 375\u00b0F (190\u00b0C). Line baking sheets with parchment paper.",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Mix flour, baking soda, and salt in a bowl. Set aside.",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Beat softened butter with both sugars until fluffy, about 3 minutes. Add eggs and vanilla, beat well.",
+        "duration": "5 minutes",
+        "tips": "Butter should be soft but not melted"
+      },
+      {
+        "step": 4,
+        "instruction": "Gradually add flour mixture to butter mixture. Stir in chocolate chips.",
+        "duration": "3 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Drop rounded tablespoons of dough onto prepared sheets, 2 inches apart. Bake 9-11 minutes until golden.",
+        "duration": "12 minutes",
+        "tips": "Don't overbake - they'll firm up as they cool"
+      }
+    ]
+  }
+}

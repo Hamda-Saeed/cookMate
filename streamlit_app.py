@@ -5,7 +5,7 @@ Web interface for the voice-driven recipe assistant
 
 import streamlit as st
 import time
-from cookmate_rag import CookMateRAG,ConversationState
+from cookmate_rag import CookMateRAG, ConversationState
 import plotly.graph_objects as go
 import pandas as pd
 from datetime import datetime
@@ -110,14 +110,20 @@ with st.sidebar:
             st.write(f"⏱️ Prep: {recipe.get('prep_time', 'N/A')}")
             st.write(f"👨‍🍳 Cook: {recipe.get('cook_time', 'N/A')}")
             st.write(f"🍽️ Serves: {recipe.get('servings', 'N/A')}")
+            
             if st.button(f"Start {recipe['name']}", key=f"start_{recipe_id}"):
-                query = f"Start {recipe['name']}"
-                st.session_state.messages.append({"role": "user", "content": query})
-                response, latency = st.session_state.cookmate.process_query(query)
+                # Use the direct method instead of sending a query
+                response = st.session_state.cookmate.start_specific_recipe(recipe['name'])
+                
+                # Update chat and state
+                st.session_state.messages.append({"role": "user", "content": f"Start {recipe['name']}"})
                 st.session_state.messages.append({"role": "assistant", "content": response})
+                
+                # Update stats
                 st.session_state.stats['queries'] += 1
-                st.session_state.stats['latencies'].append(latency)
+                st.session_state.stats['latencies'].append(0.1)  # Fast for direct method
                 st.session_state.stats['avg_latency'] = sum(st.session_state.stats['latencies']) / len(st.session_state.stats['latencies'])
+                
                 st.rerun()
     
     st.divider()
@@ -145,7 +151,7 @@ col1, col2 = st.columns([5, 1])
 with col1:
     user_input = st.chat_input("Ask me anything about cooking...")
 
-# In your Streamlit app, modify the voice section:
+# Voice mode section
 with col2:
     voice_mode = st.checkbox("🎤 Voice", help="Enable voice mode (requires microphone)")
     

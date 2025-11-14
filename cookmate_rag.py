@@ -46,6 +46,13 @@ from scipy.io.wavfile import write
 # Ollama for local LLM (best free option)
 import requests
 
+# Load environment variables
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    print("⚠ python-dotenv not installed. Using system environment variables.")
+
 
 @dataclass
 class RecipeStep:
@@ -57,43 +64,49 @@ class RecipeStep:
 
 
 @dataclass
+class ConversationMessage:
+    role: str
+    content: str
+    timestamp: str
+    sources: Optional[List[str]] = None
+
+
+@dataclass
 class ConversationState:
     current_recipe: Optional[str] = None
     current_recipe_name: Optional[str] = None
     current_step: int = 0
     total_steps: int = 0
     timer_start: Optional[float] = None
-    conversation_history: List[Dict] = field(default_factory=list)
+    messages: List[ConversationMessage] = field(default_factory=list)
+    max_history: int = 10
     last_response: str = ""
 
-import requests
 
-class GroqLLM:
-    """Groq LLM for super-fast inference (completely free)"""
+class ImprovedGroqLLM:
+    """Fixed Groq LLM with proper context and hallucination prevention"""
     
-    def __init__(self, model: str = "llama-3.1-8b-instant", api_key: str = None):
+    def __init__(self, model: str = "llama-3.1-8b-instant"):
         self.model = model
         self.base_url = "https://api.groq.com/openai/v1"
-        self.api_key = api_key or self._get_api_key()
+        self.api_key = self._get_api_key()
         self.available = self._check_connection()
     
     def _get_api_key(self):
-        
-        """Get Groq API key from environment or user input"""
-        import os
-        api_key = os.getenv(key)
+        api_key = os.getenv("GROQ_API_KEY")
         if not api_key:
-            print("🔑 Please set your Groq API key:")
-            print("   1. Get free API key from: https://console.groq.com/keys")
-            print("   2. Set environment variable: GROQ_API_KEY=your_key_here")
-            print("   3. Or enter it when prompted")
-            api_key = input("Enter your Groq API key: ").strip()
+            print("\n🔑 GROQ_API_KEY not found!")
+            print("   Option 1: Create .env file with: GROQ_API_KEY=your_key")
+            print("   Option 2: Set environment variable")
+            print("   Option 3: Enter key now")
+            api_key = input("\nEnter Groq API key (or press Enter to skip): ").strip()
+            if not api_key:
+                return None
         return api_key
     
     def _check_connection(self):
-        """Check if Groq API is accessible"""
         if not self.api_key:
-            print("❌ No Groq API key provided")
+            print("⚠ Running without LLM (fallback mode)")
             return False
         
         try:
@@ -105,26 +118,35 @@ class GroqLLM:
             if response.status_code == 200:
                 print(f"✓ Connected to Groq ({self.model})")
                 return True
-            else:
-                print(f"⚠ Groq API error: {response.status_code}")
-                return False
+            return False
         except Exception as e:
-            print(f"⚠ Groq not available: {e}")
-            print("   Using fallback mode")
+            print(f"⚠ Groq unavailable: {e}")
             return False
     
-    def generate(self, prompt: str, context: str = "") -> str:
-        """Generate response using Groq API"""
+    def generate_with_history(
+        self, 
+        prompt: str, 
+        context: str, 
+        conversation_history: List[ConversationMessage],
+        recipe_name: str = None
+    ) -> str:
+        """Generate response with conversation history and strict grounding"""
+        
         if not self.available:
-            return self._fallback_response(prompt, context)
+            return self._safe_fallback(prompt, context)
+        
+        system_message = self._build_strict_system_prompt(context, recipe_name)
+        messages = [{"role": "system", "content": system_message}]
+        
+        # Add recent conversation history (last 10 messages)
+        recent_history = conversation_history[-10:] if len(conversation_history) > 10 else conversation_history
+        
+        for msg in recent_history:
+            messages.append({"role": msg.role, "content": msg.content})
+        
+        messages.append({"role": "user", "content": prompt})
         
         try:
-            # Prepare the message
-            system_message = "You are CookMate, a helpful cooking assistant. Provide concise, practical cooking advice (2-3 sentences max)."
-            
-            if context:
-                system_message += f"\n\nRecipe Context: {context}"
-            
             response = requests.post(
                 f"{self.base_url}/chat/completions",
                 headers={
@@ -133,139 +155,98 @@ class GroqLLM:
                 },
                 json={
                     "model": self.model,
-                    "messages": [
-                        {"role": "system", "content": system_message},
-                        {"role": "user", "content": prompt}
-                    ],
-                    "temperature": 0.7,
-                    "max_tokens": 150,
-                    "top_p": 0.9
+                    "messages": messages,
+                    "temperature": 0.3,
+                    "max_tokens": 200,
+                    "top_p": 0.8,
+                    "frequency_penalty": 0.3,
+                    "presence_penalty": 0.3
                 },
                 timeout=30
             )
             
             if response.status_code == 200:
                 result = response.json()["choices"][0]["message"]["content"].strip()
-                if result:
-                    return result
-            else:
-                print(f"⚠ Groq API error: {response.status_code} - {response.text}")
                 
-        except requests.exceptions.Timeout:
-            print("⚠ Groq response timed out, using fallback")
-        except Exception as e:
-            print(f"⚠ Groq error: {e}")
-        
-        return self._fallback_response(prompt, context)
-    
-    def _fallback_response(self, prompt: str, context: str) -> str:
-        """Enhanced fallback when Groq unavailable"""
-        prompt_lower = prompt.lower()
-        
-        # Handle common cooking questions
-        if "substitute" in prompt_lower or "replace" in prompt_lower:
-            if context:
-                return f"Based on the recipe: {context[:200]}... Common substitutions: butter→oil, milk→cream, eggs→flax eggs."
-            return "Common substitutions: butter→oil/margarine, eggs→flax eggs, milk→almond milk. What specific ingredient?"
-        
-        if "how long" in prompt_lower or "time" in prompt_lower:
-            if context and any(word in context for word in ["minute", "hour", "second"]):
-                return context[:250]
-            return "Check the recipe timing. Most steps take 5-15 minutes. Which step are you asking about?"
-        
-        if any(word in prompt_lower for word in ["weather", "news", "sports", "politics"]):
-            return "I'm CookMate, your cooking assistant! I focus on recipes and cooking techniques. What would you like to cook? 🍳"
-        
-        # Use context if available
-        if context:
-            sentences = context.split('.')[:2]
-            return '. '.join(sentences) + '.'
-        
-        return "I'm here to help with cooking! Try asking about recipes, ingredients, or cooking techniques."
-class OllamaLLM:
-    """Local LLM using Ollama (completely free)"""
-    
-    def __init__(self, model: str = "llama3.2", base_url: str = "http://localhost:11434"):
-        self.model = model
-        self.base_url = base_url
-        self.available = self._check_connection()
-    
-    def _check_connection(self):
-        """Check if Ollama is running"""
-        try:
-            response = requests.get(f"{self.base_url}/api/tags", timeout=5)
-            if response.status_code == 200:
-                print(f"✓ Connected to Ollama")
-                return True
-        except Exception as e:
-            print("⚠ Ollama not detected. Running in fallback mode.")
-            print("   To enable LLM: Install Ollama from https://ollama.ai")
-            print("   Then run: ollama pull llama3.2 && ollama serve")
-            return False
-        return False
-    
-    def generate(self, prompt: str, context: str = "") -> str:
-        """Generate response from LLM"""
-        if not self.available:
-            return self._fallback_response(prompt, context)
-        
-        full_prompt = f"{context}\n\nUser query: {prompt}\n\nProvide a helpful, concise response (2-3 sentences max):"
-        
-        try:
-            response = requests.post(
-                f"{self.base_url}/api/generate",
-                json={
-                    "model": self.model,
-                    "prompt": full_prompt,
-                    "stream": False,
-                    "options": {
-                        "temperature": 0.7,
-                        "top_p": 0.9,
-                        "num_predict": 150,  # Limit response length
-                    }
-                },
-                timeout=60  # Increased timeout
-            )
-            
-            if response.status_code == 200:
-                result = response.json()["response"].strip()
-                if result:
+                if self._is_valid_response(result, context):
                     return result
-        except requests.exceptions.Timeout:
-            print("⚠ LLM response timed out, using fallback")
+                
+                print("⚠ Response failed validation, using fallback")
+                return self._safe_fallback(prompt, context)
+            
+            return self._safe_fallback(prompt, context)
+            
         except Exception as e:
             print(f"⚠ LLM error: {e}")
-        
-        return self._fallback_response(prompt, context)
+            return self._safe_fallback(prompt, context)
     
-    def _fallback_response(self, prompt: str, context: str) -> str:
-        """Enhanced fallback when LLM unavailable"""
+    def _build_strict_system_prompt(self, context: str, recipe_name: str = None) -> str:
+        recipe_info = f"for {recipe_name}" if recipe_name else ""
+        
+        return f"""You are CookMate, a precise cooking assistant {recipe_info}.
+
+CRITICAL RULES:
+1. ONLY use information from the Recipe Context below
+2. If answer is NOT in context, say: "I don't have that information in the current recipe"
+3. NEVER make up ingredients, steps, times, or temperatures
+4. Keep responses under 3 sentences
+5. DO NOT answer non-cooking questions
+
+Recipe Context:
+---
+{context}
+---
+
+If question cannot be answered using ONLY the information above, say:
+"I don't see that in the current recipe. Ask about something else?"
+"""
+    
+    def _is_valid_response(self, response: str, context: str) -> bool:
+        generic_phrases = ["generally", "typically", "usually", "most chefs", "traditionally"]
+        response_lower = response.lower()
+        
+        generic_count = sum(1 for phrase in generic_phrases if phrase in response_lower)
+        if generic_count >= 2:
+            return False
+        
+        context_words = set(context.lower().split())
+        response_words = set(response_lower.split())
+        overlap = len(context_words & response_words)
+        
+        if overlap < 3 and len(response.split()) > 10:
+            return False
+        
+        return True
+    
+    def _safe_fallback(self, prompt: str, context: str) -> str:
         prompt_lower = prompt.lower()
         
-        # Handle common cooking questions without LLM
-        if "substitute" in prompt_lower or "replace" in prompt_lower:
-            if context:
-                return f"Based on the recipe, here are some options: {context[:200]}... For specific substitutions, common alternatives usually work (e.g., butter→oil, milk→water)."
-            return "Common substitutions: butter→oil/margarine, eggs→flax eggs, milk→almond milk. What specific ingredient are you asking about?"
+        off_topic = ["weather", "news", "sports", "politics", "stock", "time", "date"]
+        if any(word in prompt_lower for word in off_topic):
+            return "I'm CookMate - I only help with cooking! What would you like to cook? 🍳"
         
-        if "how long" in prompt_lower or "time" in prompt_lower:
-            if context and any(word in context for word in ["minute", "hour", "second"]):
-                return context[:300]
-            return "Timing information depends on the specific step. Could you be more specific about which part of the recipe?"
-        
-        if any(word in prompt_lower for word in ["weather", "news", "sports", "politics"]):
-            return "I'm CookMate, your cooking assistant! I focus on helping with recipes and cooking. What would you like to cook today?"
-        
-        # Use context if available
         if context:
-            sentences = context.split('.')[:2]
-            return '. '.join(sentences) + '.'
+            sentences = [s.strip() for s in context.split('.') if s.strip()]
+            
+            best_sentence = ""
+            best_score = 0
+            query_words = set(prompt_lower.split())
+            
+            for sentence in sentences[:5]:
+                sentence_words = set(sentence.lower().split())
+                score = len(query_words & sentence_words)
+                if score > best_score:
+                    best_score = score
+                    best_sentence = sentence
+            
+            if best_sentence and best_score > 0:
+                return best_sentence + "."
         
-        return "I'm here to help with cooking! Try asking about recipes, ingredients, or cooking techniques."
+        return "I don't have that information in the current recipe. Ask about ingredients, steps, or timing?"
 
 
 class CookMateRAG:
-    """Complete CookMate system with all features"""
+    """Complete CookMate system with all features and improved RAG"""
     
     def __init__(self, 
                  recipe_data_path: str = "recipes.json",
@@ -299,9 +280,9 @@ class CookMateRAG:
         ))
         self.collection = self._setup_vector_db()
         
-        # Initialize LLM (Ollama - completely free local LLM)
+        # Initialize LLM with improved Groq implementation
         print("🤖 Connecting to Groq LLM...")
-        self.llm = GroqLLM(model="llama-3.1-8b-instant")  # ← Use the new model name
+        self.llm = ImprovedGroqLLM(model="llama-3.1-8b-instant")
         
         # Initialize ASR
         self.whisper_model = None
@@ -536,271 +517,345 @@ Ingredients:
         except:
             pass
     
-    def retrieve_context(self, query: str, k: int = 3) -> List[Dict]:
-        """Retrieve relevant context using RAG"""
+    def retrieve_context(self, query: str, k: int = 3) -> Tuple[str, List[Dict]]:
+        """Retrieve relevant context using RAG with filtering"""
         query_embedding = self.embedding_model.encode([query])[0].tolist()
+        
+        where_filter = None
+        if self.state.current_recipe:
+            where_filter = {"recipe_id": self.state.current_recipe}
         
         results = self.collection.query(
             query_embeddings=[query_embedding],
-            n_results=k
+            n_results=k * 2,
+            where=where_filter
         )
         
         contexts = []
         for i in range(len(results['documents'][0])):
-            contexts.append({
-                "content": results['documents'][0][i],
-                "metadata": results['metadatas'][0][i],
-                "distance": results['distances'][0][i]
-            })
+            distance = results['distances'][0][i]
+            
+            if distance < 0.7:  # Quality threshold
+                contexts.append({
+                    "content": results['documents'][0][i],
+                    "metadata": results['metadatas'][0][i],
+                    "distance": distance,
+                    "relevance": 1 - distance
+                })
         
-        return contexts
+        contexts.sort(key=lambda x: x['relevance'], reverse=True)
+        contexts = contexts[:k]
+        
+        if not contexts:
+            return "", []
+        
+        context_parts = [ctx['content'] for ctx in contexts]
+        context_string = "\n\n".join(context_parts)
+        
+        return context_string, contexts
     
-    def _classify_query(self, query: str) -> str:
-        """Classify query type to decide how to handle it"""
-        query_lower = query.lower().strip()
-        
-        # Off-topic (highest priority)
-        off_topic = ["weather", "news", "sports", "politics", "stock", "movie", "calculate"]
-        if any(word in query_lower for word in off_topic):
-            return "off_topic"
-        
-        # Navigation commands - EXPANDED and PRIORITIZED
-        navigation_keywords = [
-            "next", "repeat", "previous", "back", "continue", "start", "begin", 
-            "make", "again", "go to step", "step", "jump to", "how many steps",
-            "number of steps", "total steps", "last step", "what's next", "whats next",
-            "next step", "continue", "proceed", "move on", "go ahead", "ok next", "next please"
-        ]
-        
-        # If we have an active recipe, be ULTRA-AGGRESSIVE about classifying as navigation
-        if self.state.current_recipe:
-            # Short commands are ALWAYS navigation when we have an active recipe
-            if len(query.split()) <= 4:  # Increased from 3 to 4 to catch "next step"
-                if any(word in query_lower for word in ["next", "back", "previous", "again", "repeat", "continue", "go", "ok", "step"]):
-                    return "navigation"
-            
-            # Specific handling for "next step" variations - THESE SHOULD NEVER FAIL
-            if any(phrase in query_lower for phrase in ["next step", "next please", "whats next", "what's next", "ok next"]):
-                return "navigation"
-            
-            # Common navigation patterns
-            if any(keyword in query_lower for keyword in navigation_keywords):
-                return "navigation"
-        
-        # Standard navigation detection for all cases
-        if any(keyword in query_lower for keyword in navigation_keywords):
-            return "navigation"
-        
-        # Time estimation queries
-        time_keywords = ["how much time", "time left", "how long", "time remaining", "much more time", "time it will take", "how much longer"]
-        if any(keyword in query_lower for keyword in time_keywords):
-            return "cooking"
-        
-        # Cooking-related (if has active recipe, assume it's about that)
-        if self.state.current_recipe:
-            return "cooking"
-        
-        # Check for cooking keywords
-        cooking_keywords = [
-            "recipe", "cook", "bake", "ingredient", "substitute", "replace",
-            "how long", "temperature", "oven", "stir", "mix", "chop",
-            "boil", "fry", "pasta", "chicken", "food", "meal"
-        ]
-        if any(keyword in query_lower for keyword in cooking_keywords):
-            return "cooking"
-        
-        return "general"
+    def _is_off_topic(self, query: str) -> bool:
+        """Check if query is off-topic"""
+        off_topic = ["weather", "news", "sports", "politics", "stock", "movie", "time", "date"]
+        return any(word in query.lower() for word in off_topic)
     
-    def process_query(self, query: str) -> Tuple[str, float]:
-        """Process user query with context awareness and smart routing"""
-        start_time = time.time()
-        query_lower = query.lower().strip()
+    def _handle_mixed_intent(self, query: str) -> Optional[str]:
+        """Handle queries that have multiple intents"""
+        query_lower = query.lower()
         
-        # Handle standalone numbers FIRST (before classification)
-        if query.strip().isdigit():
-            step_num = int(query.strip())
-            if self.state.current_recipe:
-                return self._go_to_specific_step(step_num), 0.1
-            else:
-                return "Please start a recipe first. Try 'start pasta carbonara' or 'make chocolate chip cookies'.", 0.1
+        mixed_indicators = [" and ", " also ", " plus ", " then ", " after that", " next "]
+        if not any(indicator in query_lower for indicator in mixed_indicators):
+            return None
         
-        # ULTRA-AGGRESSIVE navigation detection for active recipes
-        if self.state.current_recipe:
-            # These patterns should ALWAYS be treated as next step navigation
-            next_step_patterns = [
-                "next", "next step", "next please", "whats next", "what's next",
-                "continue", "proceed", "go ahead", "move on", "ok next"
-            ]
-            
-            if any(pattern in query_lower for pattern in next_step_patterns):
-                return self._handle_next_step(), 0.1
+        print("🎯 Detected mixed intent query")
         
-        # Classify the query
-        query_type = self._classify_query(query)
+        # Split and process each part
+        responses = []
         
-        # Handle off-topic first
-        if query_type == "off_topic":
-            response = "I'm CookMate, your cooking assistant! 🍳 I help with recipes, ingredients, and cooking techniques. What would you like to cook today?"
-        
-        # Handle based on type
-        elif query_type == "navigation":
-            # NEW: Handle "last step" specifically
-            if "last step" in query_lower:
-                if self.state.current_recipe:
-                    response = self._go_to_specific_step(self.state.total_steps)
-                else:
-                    response = "Please start a recipe first."
-            
-            # NEW: Handle step count queries
-            elif any(phrase in query_lower for phrase in ["how many steps", "number of steps", "total steps"]):
-                if self.state.current_recipe:
-                    response = f"This recipe has {self.state.total_steps} steps."
-                else:
-                    response = "Please start a recipe first to see the step count."
-            
-            # Handle "go to step X" commands - only when numbers are present
-            elif any(phrase in query_lower for phrase in ["go to step", "jump to step"]) or ("step" in query_lower and re.search(r'\d+', query)):
-                numbers = re.findall(r'\d+', query)
-                if numbers:
-                    step_num = int(numbers[0])
-                    response = self._go_to_specific_step(step_num)
-                else:
-                    # Check for "last" keyword
-                    if "last" in query_lower and self.state.current_recipe:
-                        response = self._go_to_specific_step(self.state.total_steps)
-                    else:
-                        # If no number and not "last", assume they want next step
-                        response = self._handle_next_step()
-            
-            # Context-aware navigation - FIXED: handle all "next" variations
-            elif any(phrase in query_lower for phrase in ["what's next", "next step", "continue", "next", "whats next", "proceed", "move on", "go ahead", "ok next", "next please"]):
-                response = self._handle_next_step()
-            
-            elif any(phrase in query_lower for phrase in ["repeat", "say that again", "what was that", "again"]):
-                response = self._handle_repeat()
-            
-            elif any(phrase in query_lower for phrase in ["previous", "go back", "back"]):
-                response = self._handle_previous_step()
-            
-            elif any(phrase in query_lower for phrase in ["start", "begin", "make"]):
-                # If we already have a recipe, check if they want to restart
-                if self.state.current_recipe:
-                    current_recipe_name = self.state.current_recipe_name.lower()
-                    # Check if they're referring to current recipe
-                    if any(word in query_lower for word in current_recipe_name.split()):
-                        # They're referring to current recipe, restart it
-                        response = self._start_recipe(self.state.current_recipe, self.recipes[self.state.current_recipe])
-                    else:
-                        # They want a different recipe
-                        response = self._handle_start_recipe(query)
-                else:
-                    response = self._handle_start_recipe(query)
-            
-            else:
-                # Fallback: if we have active recipe and it's a short query, assume next step
-                if self.state.current_recipe and len(query.split()) <= 3:
-                    response = self._handle_next_step()
-                else:
-                    response = self._handle_general_query(query)
-        
-        elif query_type == "cooking":
-            # NEW: Handle time estimation queries
-            if any(phrase in query_lower for phrase in ["how much time", "time left", "how long", "time remaining", "much more time", "time it will take", "how much longer"]):
-                response = self._handle_time_estimation()
-            
-            # Cooking-specific queries (use RAG)
-            elif "substitute" in query_lower or "replace" in query_lower:
-                response = self._handle_substitution(query)
-            
-            elif "ingredient" in query_lower:
-                response = self._handle_ingredient_query(query)
-            
-            else:
-                response = self._handle_general_query(query)
-        
-        elif query_type == "general":
-            # General questions (LLM without RAG restriction)
-            response = self._handle_general_question(query)
-        
+        # Common splitting patterns
+        if " and " in query_lower:
+            parts = query.split(" and ")
+        elif " then " in query_lower:
+            parts = query.split(" then ")
+        elif " also " in query_lower:
+            parts = query.split(" also ")
         else:
-            response = self._handle_general_query(query)
+            parts = [query]  # Fallback
         
-        latency = time.time() - start_time
-        self.state.last_response = response
-        self.state.conversation_history.append({
-            "query": query,
-            "response": response,
-            "timestamp": datetime.now().isoformat(),
-            "latency": latency
-        })
+        for part in parts[:2]:  # Process max 2 parts to avoid complexity
+            part = part.strip()
+            if part:
+                # Use existing process_query but don't update history yet
+                response, _ = self.process_query(part)
+                responses.append(f"{part}: {response}")
         
-        return response, latency
+        return " | ".join(responses) if responses else None
     
-    def _handle_time_estimation(self) -> str:
-        """Calculate remaining time for current recipe"""
+    def _handle_recipe_switch(self, query: str) -> Optional[str]:
+        """Handle requests to switch recipes"""
+        query_lower = query.lower()
+        
+        switch_patterns = [
+            "switch to", "change to", "try", "different recipe", 
+            "new recipe", "another recipe", "let's try", "how about",
+            "i want to make instead", "start over with"
+        ]
+        
+        if any(pattern in query_lower for pattern in switch_patterns):
+            print("🔄 Detected recipe switch request")
+            
+            # If we have a current recipe, confirm switch
+            if self.state.current_recipe:
+                current_recipe = self.state.current_recipe_name
+                # Extract new recipe name from query
+                for recipe_id, recipe in self.recipes.items():
+                    if recipe['name'].lower() in query_lower:
+                        self.state.current_recipe = None  # Reset current recipe
+                        self.state.current_step = 0
+                        return f"Switching from {current_recipe} to {recipe['name']}.\n\n{self._start_recipe(recipe_id, recipe)}"
+            
+            # If no specific recipe mentioned, show available options
+            available = ', '.join([f'"{r["name"]}"' for r in self.recipes.values()])
+            return f"Available recipes: {available}. Which one would you like to switch to?"
+        
+        return None
+    def _handle_multi_step_request(self, query: str) -> Optional[str]:
+        """Handle requests for multiple steps"""
+        query_lower = query.lower()
+        
         if not self.state.current_recipe:
-            return "Please start a recipe first to estimate cooking time."
+            return None
+        
+        # Patterns for multiple steps
+        multi_step_patterns = [
+            "next two steps", "next 2 steps", "next few steps",
+            "steps", "through", "to step", "until step"
+        ]
+        
+        if not any(pattern in query_lower for pattern in multi_step_patterns):
+            return None
+        
+        print("📚 Detected multi-step request")
         
         recipe = self.recipes.get(self.state.current_recipe)
+        current_step = self.state.current_step
         
-        if self.state.current_step == 0:
-            total_time = self._parse_time(recipe.get('prep_time', '0')) + self._parse_time(recipe.get('cook_time', '0'))
-            return f"Total estimated time: {total_time} minutes. You haven't started cooking yet."
+        # Extract step range from query
+        numbers = re.findall(r'\d+', query)
         
-        # Calculate remaining time from current step to end
-        remaining_time = 0
-        for i in range(self.state.current_step - 1, len(recipe['steps'])):
-            step = recipe['steps'][i]
-            if step.get('duration'):
-                remaining_time += self._parse_time(step['duration'])
+        if "next two" in query_lower or "next 2" in query_lower:
+            # Show next 2 steps
+            end_step = min(current_step + 2, self.state.total_steps)
+            steps_range = range(current_step + 1, end_step + 1)
+        elif "next few" in query_lower:
+            # Show next 3 steps
+            end_step = min(current_step + 3, self.state.total_steps)
+            steps_range = range(current_step + 1, end_step + 1)
+        elif numbers and "to step" in query_lower:
+            # Specific range like "steps 2 to 4"
+            if len(numbers) >= 2:
+                start_step = int(numbers[0])
+                end_step = min(int(numbers[1]), self.state.total_steps)
+                steps_range = range(start_step, end_step + 1)
+            else:
+                steps_range = range(current_step + 1, self.state.total_steps + 1)
+        else:
+            # Default: show remaining steps
+            steps_range = range(current_step + 1, self.state.total_steps + 1)
         
-        current_step = recipe['steps'][self.state.current_step - 1]
-        current_step_name = f"Step {self.state.current_step}: {current_step['instruction'][:100]}..."
+        responses = []
+        for step_num in steps_range:
+            if step_num <= self.state.total_steps:
+                step = recipe['steps'][step_num - 1]
+                step_response = f"Step {step['step']}: {step['instruction']}"
+                if step.get('duration'):
+                    step_response += f" ⏱ {step['duration']}"
+                if step.get('tips'):
+                    step_response += f" 💡 {step['tips']}"
+                responses.append(step_response)
         
-        steps_remaining = self.state.total_steps - self.state.current_step + 1
+        if responses:
+            return "Here are the steps:\n\n" + "\n\n".join(responses)
         
-        return f"You're on step {self.state.current_step} of {self.state.total_steps}. " \
-               f"Estimated time remaining: {remaining_time} minutes. " \
-               f"Steps remaining: {steps_remaining}. " \
-               f"Current: {current_step_name}"
-    
-    def _parse_time(self, time_str: str) -> int:
-        """Parse time strings like '10 minutes' into minutes"""
-        if not time_str:
-            return 0
+        return None
+    def _update_conversation_history(self, query: str, response: str):
+            """Update conversation history with new messages"""
+            self.state.messages.append(ConversationMessage(
+                role="user",
+                content=query,
+                timestamp=datetime.now().isoformat()
+            ))
+            
+            self.state.messages.append(ConversationMessage(
+                role="assistant",
+                content=response,
+                timestamp=datetime.now().isoformat()
+            ))
+            
+            # Trim history if too long
+            if len(self.state.messages) > self.state.max_history * 2:
+                self.state.messages = self.state.messages[-self.state.max_history * 2:]
+            
+            self.state.last_response = response
+
+    def _handle_quantity_adjustment(self, query: str) -> Optional[str]:
+        """Handle recipe scaling requests"""
+        query_lower = query.lower()
         
-        numbers = re.findall(r'\d+', time_str)
-        if numbers:
-            minutes = int(numbers[0])
-            # Handle hours
-            if 'hour' in time_str.lower():
-                minutes *= 60
-            return minutes
-        return 0
-    
-    def _go_to_specific_step(self, step_num: int) -> str:
-        """Jump to a specific step number"""
         if not self.state.current_recipe:
-            return "Please start a recipe first. Try saying 'Start pasta carbonara' or 'Make chocolate chip cookies'."
+            return None
+        
+        adjustment_patterns = [
+            "half", "double", "triple", "quarter",
+            "for 2 people", "for 4 people", "for 6 people",
+            "make less", "make more", "scale", "adjust"
+        ]
+        
+        if not any(pattern in query_lower for pattern in adjustment_patterns):
+            return None
+        
+        print("⚖️ Detected quantity adjustment request")
         
         recipe = self.recipes.get(self.state.current_recipe)
+        current_servings = recipe.get('servings', 4)
         
-        if step_num < 1 or step_num > len(recipe['steps']):
-            return f"That recipe only has {len(recipe['steps'])} steps. Please choose a step between 1 and {len(recipe['steps'])}."
+        # Extract target quantity
+        numbers = re.findall(r'\d+', query)
+        target_servings = None
         
-        self.state.current_step = step_num
-        step = recipe['steps'][step_num - 1]
+        if "half" in query_lower:
+            factor = 0.5
+            target_servings = current_servings * 0.5
+        elif "double" in query_lower or "2 times" in query_lower:
+            factor = 2.0
+            target_servings = current_servings * 2
+        elif "triple" in query_lower or "3 times" in query_lower:
+            factor = 3.0
+            target_servings = current_servings * 3
+        elif numbers:
+            target_servings = int(numbers[0])
+            factor = target_servings / current_servings
+        else:
+            return "Please specify how much you want to adjust (half, double, or specific number of servings)"
         
-        response = f"Jumping to Step {step['step']} of {self.state.total_steps}: {step['instruction']}"
+        if target_servings:
+            response = f"🔄 Adjusting from {current_servings} to {target_servings:.0f} servings:\n\n"
+            
+            # Show adjusted ingredients (simplified)
+            for ingredient in recipe['ingredients']:
+                # Simple ingredient adjustment (this is basic - could be enhanced)
+                adjusted_ingredient = f"• {ingredient} × {factor:.1f}"
+                response += adjusted_ingredient + "\n"
+            
+            response += f"\n⏱ Cooking time remains similar. Adjust seasonings to taste."
+            return response
         
-        if step.get('duration'):
-            response += f"\n⏱ This takes about {step['duration']}."
+        return None
+    def _handle_equipment_substitution(self, query: str) -> Optional[str]:
+        """Handle equipment substitution questions"""
+        query_lower = query.lower()
         
-        if step.get('tips'):
-            response += f"\n💡 Tip: {step['tips']}"
+        equipment_patterns = [
+            "without", "don't have", "no ", "alternative to", 
+            "substitute for", "can i use", "instead of"
+        ]
+        
+        equipment_keywords = [
+            "mixer", "oven", "baking sheet", "pan", "pot", 
+            "whisk", "blender", "processor", "rolling pin"
+        ]
+        
+        if not any(pattern in query_lower for pattern in equipment_patterns):
+            return None
+        
+        if not any(equipment in query_lower for equipment in equipment_keywords):
+            return None
+        
+        print("🔧 Detected equipment substitution request")
+        
+        # Basic equipment substitutions
+        equipment_subs = {
+            "mixer": "You can use a whisk and elbow grease, or a fork for mixing.",
+            "oven": "For stovetop cooking, use a covered pan on low heat. For baking, consider a toaster oven or air fryer.",
+            "baking sheet": "Use any flat oven-safe pan, pizza stone, or even foil shaped into a tray.",
+            "whisk": "A fork works well for most mixing. For egg whites, use a clean glass jar and shake vigorously.",
+            "blender": "Use a food processor, immersion blender, or manually chop/mash ingredients.",
+            "rolling pin": "Use a wine bottle, sturdy glass, or even a clean cylindrical can.",
+            "baking pan": "Use any oven-safe dish of similar size. Adjust cooking time if depth differs."
+        }
+        
+        for equipment, substitution in equipment_subs.items():
+            if equipment in query_lower:
+                return f"🔧 {substitution}"
+        
+        return "For equipment substitutions: use similar-shaped items, adjust cooking times, and be creative with what you have!"
+        
+    def _handle_substitution_query(self, query: str) -> Optional[str]:
+        """Handle ingredient substitution questions - ALWAYS USE LLM"""
+        # Apply spell correction first
+        corrected_query = self._correct_spelling(query)
+        query_lower = corrected_query.lower().strip()
+        
+        print(f"🔧 Handling substitution query: '{query}' -> '{corrected_query}'")
+        
+        # Check if this is a substitution question with fuzzy matching
+        substitution_patterns = [
+            "substitute", "replace", "instead of", "alternative", 
+            "instead", "can i use", "can i replace", "what can i use",
+            "don't have", "no ", "without", "swap"
+        ]
+        
+        is_substitution = any(self._fuzzy_match(pattern, query_lower, threshold=0.6) for pattern in substitution_patterns)
+        if not is_substitution:
+            return None
+        
+        print("🎯 Detected substitution question - USING LLM")
+        
+        # ALWAYS use LLM for substitution questions with enhanced context
+        enhanced_context = self._get_enhanced_substitution_context(query)
+        
+        # Use LLM with enhanced context
+        response = self.llm.generate_with_history(
+            prompt=query,
+            context=enhanced_context,
+            conversation_history=self.state.messages,
+            recipe_name=self.state.current_recipe_name
+        )
         
         return response
-    
+
+    def _get_enhanced_substitution_context(self, query: str) -> str:
+        """Get enhanced context for substitution questions"""
+        # Get regular RAG context
+        context, sources = self.retrieve_context(query, k=3)
+        
+        # Add general substitution knowledge
+        substitution_knowledge = """
+    General Ingredient Substitutions:
+    - Eggs: 1 tbsp chia seeds + 3 tbsp water = 1 egg, or mashed banana, applesauce
+    - Butter: Coconut oil, vegetable oil, margarine (1:1 ratio)
+    - Milk: Any plant-based milk (almond, soy, oat, coconut)
+    - Buttermilk: 1 cup milk + 1 tbsp lemon juice/vinegar
+    - Flour: Almond flour, coconut flour, gluten-free blends (adjust ratios)
+    - Sugar: Honey, maple syrup, coconut sugar (adjust liquids)
+    - Baking powder: 1 tsp = 1/4 tsp baking soda + 1/2 tsp cream of tartar
+    - Yogurt: Sour cream, buttermilk, coconut cream
+    - Heavy cream: Milk + butter, coconut cream, evaporated milk
+    - Wine: Broth with a splash of vinegar
+    - Tomato paste: Tomato sauce reduced, ketchup (in small amounts)
+    - Fresh herbs: Dried herbs (use 1/3 amount)
+    - Pancetta/Bacon: Smoked tofu, mushrooms, tempeh (vegetarian)
+    - Pasta: Zucchini noodles, spaghetti squash, rice noodles
+        """
+        
+        # Add current recipe context if available
+        recipe_context = ""
+        if self.state.current_recipe:
+            recipe = self.recipes.get(self.state.current_recipe)
+            recipe_context = f"\nCurrent Recipe: {recipe['name']}\nIngredients: {', '.join(recipe['ingredients'])}"
+        
+        return f"{context}\n\n{substitution_knowledge}\n{recipe_context}"  
+
     def _handle_next_step(self) -> str:
         """Handle next step navigation"""
         if not self.state.current_recipe:
@@ -824,17 +879,19 @@ Ingredients:
         
         return response
     
-    def _repeat_specific_step(self, step_num: int) -> str:
-        """Repeat a specific step by number"""
+    def _handle_previous_step(self) -> str:
+        """Go back to previous step"""
         if not self.state.current_recipe:
-            return "Please start a recipe first."
+            return "Please start a recipe first. Try saying 'Start pasta carbonara' or 'Make chocolate chip cookies'."
         
+        if self.state.current_step <= 1:
+            return "You're at the first step. Say 'next' to continue."
+        
+        self.state.current_step -= 1
         recipe = self.recipes.get(self.state.current_recipe)
-        if step_num < 1 or step_num > len(recipe['steps']):
-            return f"That recipe only has {len(recipe['steps'])} steps."
+        step = recipe['steps'][self.state.current_step - 1]
         
-        step = recipe['steps'][step_num - 1]
-        response = f"Step {step['step']}: {step['instruction']}"
+        response = f"Going back to Step {step['step']} of {self.state.total_steps}: {step['instruction']}"
         
         if step.get('duration'):
             response += f"\n⏱ This takes about {step['duration']}."
@@ -862,19 +919,20 @@ Ingredients:
         
         return response
     
-    def _handle_previous_step(self) -> str:
-        """Go back to previous step"""
+    def _go_to_specific_step(self, step_num: int) -> str:
+        """Jump to a specific step number"""
         if not self.state.current_recipe:
             return "Please start a recipe first. Try saying 'Start pasta carbonara' or 'Make chocolate chip cookies'."
         
-        if self.state.current_step <= 1:
-            return "You're at the first step. Say 'next' to continue."
-        
-        self.state.current_step -= 1
         recipe = self.recipes.get(self.state.current_recipe)
-        step = recipe['steps'][self.state.current_step - 1]
         
-        response = f"Going back to Step {step['step']} of {self.state.total_steps}: {step['instruction']}"
+        if step_num < 1 or step_num > len(recipe['steps']):
+            return f"That recipe only has {len(recipe['steps'])} steps. Please choose a step between 1 and {len(recipe['steps'])}."
+        
+        self.state.current_step = step_num
+        step = recipe['steps'][step_num - 1]
+        
+        response = f"Jumping to Step {step['step']} of {self.state.total_steps}: {step['instruction']}"
         
         if step.get('duration'):
             response += f"\n⏱ This takes about {step['duration']}."
@@ -940,165 +998,410 @@ Ingredients:
         
         return response
     
-    def _handle_substitution(self, query: str) -> str:
-        """Handle ingredient substitution queries"""
-        contexts = self.retrieve_context(query, k=2)
-        
-        if not contexts:
-            return "I don't have specific substitution info for that. Generally, you can substitute similar ingredients (butter↔oil, milk↔cream, etc.)"
-        
-        context_str = "\n".join([c["content"] for c in contexts])
-        
-        # Try LLM only if available, otherwise give direct answer
-        if self.llm.available:
-            prompt = f"User is asking about ingredient substitutions: '{query}'"
-            response = self.llm.generate(prompt, context_str)
-            if response and len(response) > 20:
-                return response
-        
-        # Fallback: use the retrieved context
-        return f"Based on similar recipes:\n\n{context_str}\n\nCommon substitutions work well here (e.g., butter→oil, eggs→flax eggs)."
-    
-    def _handle_timing_query(self, query: str) -> str:
-        """Handle timing-related questions"""
-        if self.state.current_recipe and self.state.current_step > 0:
-            recipe = self.recipes.get(self.state.current_recipe)
-            step = recipe['steps'][self.state.current_step - 1]
+
+    def _correct_spelling(self, query: str) -> str:
+        """Basic spell correction for common navigation words"""
+        # Common misspellings and corrections
+        corrections = {
+            # Next variations
+            "nex": "next", "nexy": "next", "nextt": "next", "nect": "next",
+            "continew": "continue", "contnue": "continue", "contine": "continue",
+            "proced": "proceed", "proceeed": "proceed",
             
-            if step.get('duration'):
-                return f"Step {self.state.current_step} takes {step['duration']}."
-            else:
-                return f"Step {self.state.current_step} doesn't have a specific time. Follow the instructions: {step['instruction']}"
-        
-        # No active step, search recipes
-        contexts = self.retrieve_context(query, k=2)
-        if contexts:
-            return contexts[0]["content"]
-        
-        return "Please start a recipe first, then I can tell you timing for each step."
-    
-    def _handle_ingredient_query(self, query: str) -> str:
-        """Handle ingredient-related questions"""
-        if self.state.current_recipe:
-            recipe = self.recipes.get(self.state.current_recipe)
-            ingredients = '\n'.join([f"  • {ing}" for ing in recipe['ingredients']])
-            return f"For {recipe['name']}, you need:\n{ingredients}"
-        
-        contexts = self.retrieve_context(query, k=2)
-        return contexts[0]["content"] if contexts else "Please start a recipe first."
-    
-    def _handle_general_question(self, query: str) -> str:
-        """Handle general non-cooking questions with better filtering"""
-        query_lower = query.lower()
-        
-        # Detect negative statements (don't want X)
-        negative_indicators = ["don't want", "do not want", "dont want", "not interested", "no thanks"]
-        if any(neg in query_lower for neg in negative_indicators):
-            return "No problem! What would you like to cook instead? I have recipes for pasta, cookies, and more. Just say 'start [recipe name]' or ask me what's available! 🍳"
-        
-        # Check if it's completely off-topic
-        off_topic_keywords = [
-            "weather", "temperature today", "forecast", "rain", "sunny",
-            "news", "politics", "election", "president",
-            "sports", "game", "score", "team",
-            "stock", "market", "investment",
-            "movie", "film", "tv show",
-            "math", "calculate", "what is 2+2",
-        ]
-        
-        if any(keyword in query_lower for keyword in off_topic_keywords):
-            return "I'm CookMate, your cooking assistant! I specialize in recipes, ingredients, and cooking techniques. What would you like to cook today? 🍳"
-        
-        # Cooking mishaps/problems
-        cooking_problems = {
-            "overcooked": "If it's overcooked, it might be mushy. For pasta, you can still use it in a baked dish. For next time, test it a minute before the recommended time!",
-            "overboiled": "Overboiled pasta gets mushy. You can still make it work by draining immediately and tossing with sauce. Next time, test for doneness 1-2 minutes early!",
-            "undercooked": "Keep cooking! Just add more time. For pasta, it should be 'al dente' - firm but not hard.",
-            "burned": "If it's burned, unfortunately you'll need to start fresh. Lower the heat next time and watch it closely!",
-            "too salty": "Add water, cream, or unsalted ingredients to dilute. You can also add potato chunks to absorb salt.",
-            "too spicy": "Add dairy (milk, cream, yogurt) or something sweet (sugar, honey) to balance the heat.",
-            "not cooking": "Check your heat! Make sure burner is on and set to the right temperature. Give it more time.",
+            # Previous variations  
+            "prev": "previous", "previuos": "previous", "prevous": "previous",
+            "previouse": "previous", "bak": "back", "bck": "back",
+            
+            # Repeat variations
+            "repat": "repeat", "repeet": "repeat", "repeate": "repeat",
+            "agian": "again", "agane": "again", "agen": "again",
+            
+            # Step variations
+            "stp": "step", "stepp": "step", "sep": "step",
+            
+            # General
+            "whar": "what", "wat": "what", "wht": "what",
+            "sho": "show", "howw": "how", "steo": "step",
         }
         
-        for problem, solution in cooking_problems.items():
-            if problem in query_lower:
-                return f"💡 {solution}"
+        words = query.lower().split()
+        corrected_words = []
         
-        # If we have an active recipe, assume it's about that recipe
-        if self.state.current_recipe:
-            recipe = self.recipes.get(self.state.current_recipe)
-            if recipe:
-                # Try to answer based on current recipe context
-                contexts = self.retrieve_context(f"{recipe['name']} {query}", k=2)
-                context_str = "\n".join([c["content"] for c in contexts])
-                
-                # Use fallback with recipe context (no LLM - too unreliable)
-                return f"For {recipe['name']}: {context_str[:300]}..."
+        for word in words:
+            # Check if word is misspelled
+            if word in corrections:
+                corrected_words.append(corrections[word])
+                print(f"🔤 Corrected '{word}' to '{corrections[word]}'")
+            else:
+                corrected_words.append(word)
         
-        # For cooking-related general questions
-        cooking_keywords = ["cook", "recipe", "ingredient", "food", "meal", "dish"]
-        if any(keyword in query_lower for keyword in cooking_keywords):
-            contexts = self.retrieve_context(query, k=2)
-            if contexts:
-                return contexts[0]["content"]
+        return " ".join(corrected_words)
+
+
+    def _is_clear_navigation(self, query: str) -> bool:
+        """Check for CLEAR navigation commands with fuzzy matching"""
+        # Apply spell correction first
+        corrected_query = self._correct_spelling(query)
+        query_lower = corrected_query.lower().strip()
         
-        # Last resort
-        return "I'm here to help with cooking! Try asking about recipes, ingredients, cooking times, or substitutions. What would you like to know? 🍳"
+        # Clear navigation commands with fuzzy matching
+        clear_nav_patterns = [
+            "next", "next step", "continue", "proceed", 
+            "previous", "back", "go back", "previous step",
+            "repeat", "again", "say again", "repeat step",
+            "step 1", "step 2", "step 3", "step 4", "step 5", 
+            "go to step", "jump to step", "show step"
+        ]
+        
+        # Use fuzzy matching for navigation detection
+        for pattern in clear_nav_patterns:
+            if self._fuzzy_match(pattern, query_lower, threshold=0.7):
+                return True
+        
+        # Also check for very short queries that are likely navigation
+        if len(query_lower.split()) <= 2:
+            short_nav_words = ["next", "back", "prev", "again", "go", "yes", "ok"]
+            return any(self._fuzzy_match(word, query_lower, 0.6) for word in short_nav_words)
+        
+        return False
+
+
+
     
-    def _handle_general_query(self, query: str) -> str:
-        """Handle general cooking questions with RAG"""
-        query_lower = query.lower()
-        
-        # If user says "again", repeat last response
-        if query_lower in ["again", "say again", "repeat again"]:
-            return self._handle_repeat()
-        
-        # Retrieve relevant context
-        contexts = self.retrieve_context(query, k=2)
-        
-        if not contexts:
-            return "I don't have information about that in my recipes. Could you be more specific or ask about a different recipe?"
-        
-        # If we have active recipe, prioritize that
-        if self.state.current_recipe:
-            recipe = self.recipes.get(self.state.current_recipe)
+
+    def _is_navigation(self, query: str) -> bool:
+        """Check if query is navigation command - WITH SPELL CORRECTION"""
+        if not self.state.current_recipe:
+            return False
             
-            # Build context from current recipe
-            recipe_context = f"Current recipe: {recipe['name']}\n"
-            recipe_context += f"You are on step {self.state.current_step} of {self.state.total_steps}\n\n"
-            
-            # Add retrieved contexts
-            for ctx in contexts:
-                recipe_context += ctx["content"] + "\n\n"
-            
-            # Try LLM with timeout handling
-            if self.llm.available:
-                try:
-                    response = self.llm.generate(query, recipe_context)
-                    if response and len(response) > 20:
-                        return response
-                except:
-                    pass
-            
-            # Fallback: return the most relevant context directly
-            return contexts[0]["content"]
+        # First, correct spelling
+        corrected_query = self._correct_spelling(query)
+        query_lower = corrected_query.lower().strip()
         
-        # No active recipe - use RAG results directly
-        context_str = contexts[0]["content"]
+        print(f"🔤 After correction: '{query_lower}'")
         
-        # Try LLM
-        if self.llm.available:
-            response = self.llm.generate(query, context_str)
-            if response and len(response) > 20:
-                return response
+        # Expanded navigation patterns
+        navigation_patterns = {
+            "next": ["next", "continue", "proceed", "go ahead", "move on", "forward"],
+            "previous": ["previous", "back", "go back", "return", "backward"],
+            "repeat": ["repeat", "again", "say again", "once more"],
+            "step_jump": ["step", "go to step", "jump to step"],
+            "info": ["how many", "total steps", "number of steps", "current step"]
+        }
         
-        # Fallback: return context directly
-        return f"Here's what I found:\n\n{context_str}"
+        # Flatten all patterns
+        all_nav_words = []
+        for category in navigation_patterns.values():
+            all_nav_words.extend(category)
+        
+        # Check with fuzzy matching
+        for nav_word in all_nav_words:
+            if self._fuzzy_match(nav_word, query_lower):
+                return True
+        
+        # Check short commands with fuzzy matching
+        if len(query_lower.split()) <= 3:
+            short_commands = ["next", "back", "prev", "again", "repeat", "step"]
+            return any(self._fuzzy_match(cmd, query_lower) for cmd in short_commands)
+        
+        return False
+
+    def _fuzzy_match(self, pattern: str, text: str, threshold: float = 0.7) -> bool:
+        """Fuzzy string matching using simple similarity"""
+        pattern = pattern.lower()
+        text = text.lower()
+        
+        # Exact match
+        if pattern in text:
+            return True
+        
+        # Check if pattern is contained in text (for multi-word patterns)
+        if " " in pattern and any(word in text for word in pattern.split()):
+            return True
+        
+        # Simple similarity calculation for single words
+        if " " not in pattern:
+            words = text.split()
+            for word in words:
+                similarity = self._calculate_similarity(pattern, word)
+                if similarity >= threshold:
+                    print(f"🔤 Fuzzy match: '{pattern}' ~ '{word}' (score: {similarity:.2f})")
+                    return True
+        
+        return False
+
+    def _calculate_similarity(self, word1: str, word2: str) -> float:
+        """Calculate similarity between two words (0.0 to 1.0)"""
+        # Simple implementation - you can use more sophisticated algorithms
+        if word1 == word2:
+            return 1.0
+        
+        # Length-based similarity
+        len_similarity = 1 - abs(len(word1) - len(word2)) / max(len(word1), len(word2))
+        
+        # Character overlap
+        set1, set2 = set(word1), set(word2)
+        char_similarity = len(set1 & set2) / len(set1 | set2) if (set1 | set2) else 0
+        
+        # Combined score
+        return (len_similarity + char_similarity) / 2
+
+
+    def _handle_navigation(self, query: str) -> str:
+        """Handle navigation commands with SPELL CORRECTION & FUZZY MATCHING"""
+        # Correct spelling first
+        corrected_query = self._correct_spelling(query)
+        query_lower = corrected_query.lower().strip()
+        
+        print(f"🎯 Handling navigation (corrected): '{query_lower}'")
+        
+        # Define patterns with fuzzy matching
+        patterns = {
+            "next": {
+                "keywords": ["next", "continue", "proceed", "go ahead", "move on"],
+                "weight": 1.0
+            },
+            "previous": {
+                "keywords": ["previous", "back", "go back", "return"],
+                "weight": 1.0
+            },
+            "repeat": {
+                "keywords": ["repeat", "again", "say again", "once more"],
+                "weight": 1.0
+            },
+            "step_specific": {
+                "keywords": ["step", "go to step", "jump to step"],
+                "weight": 0.8
+            }
+        }
+        
+        # Calculate scores with fuzzy matching
+        scores = {}
+        for category, data in patterns.items():
+            score = 0
+            for keyword in data["keywords"]:
+                if self._fuzzy_match(keyword, query_lower, threshold=0.6):  # Lower threshold for fuzzy
+                    score += data["weight"]
+                    # Bonus for better matches
+                    if keyword in query_lower:  # Exact match
+                        score += 0.3
+            scores[category] = score
+        
+        # Find best category
+        best_category = max(scores, key=scores.get)
+        best_score = scores[best_category]
+        
+        print(f"🎯 Best category: {best_category} (fuzzy score: {best_score})")
+        
+        # Proceed with reasonable confidence (lower threshold for fuzzy)
+        if best_score >= 0.4:  # 40% threshold for fuzzy matching
+            if best_category == "next":
+                return self._handle_next_step()
+            elif best_category == "previous":
+                return self._handle_previous_step()
+            elif best_category == "repeat":
+                return self._handle_repeat()
+            elif best_category == "step_specific":
+                # Extract numbers even with spelling errors
+                numbers = re.findall(r'\d+', query)
+                if numbers:
+                    step_num = int(numbers[0])
+                    return self._go_to_specific_step(step_num)
+        
+        # Ultra-forgiving fallback for very short queries
+        if len(query_lower) <= 6:  # Very short queries
+            if any(self._fuzzy_match(word, query_lower, 0.5) for word in ["next", "yes", "ok", "go"]):
+                return self._handle_next_step()
+            elif any(self._fuzzy_match(word, query_lower, 0.5) for word in ["back", "prev"]):
+                return self._handle_previous_step()
+            elif any(self._fuzzy_match(word, query_lower, 0.5) for word in ["repeat", "again"]):
+                return self._handle_repeat()
+        
+        return "I'm not sure what you want to do. Say 'next', 'previous', or 'repeat'."
+    
+
+    def _smells_like_navigation(self, query: str) -> bool:
+            """Ultra-flexible detection for navigation-like queries"""
+            if not self.state.current_recipe:
+                return False
+                
+            query_lower = query.lower().strip()
+            
+            # Very short queries are probably navigation
+            if len(query_lower) <= 10 and len(query_lower.split()) <= 3:
+                return True
+            
+            # Common affirmative patterns
+            affirmatives = ["yes", "ok", "sure", "go", "ready", "yep", "yeah", "alright", "fine"]
+            if any(affirmative in query_lower for affirmative in affirmatives):
+                return True
+            
+            # Question patterns about progress
+            progress_questions = ["what now", "what do i do", "what should i do", "and now", "then what"]
+            if any(question in query_lower for question in progress_questions):
+                return True
+            
+            return False
+    
+
+    def start_specific_recipe(self, recipe_name: str) -> str:
+        """Direct method to start a specific recipe by name - for button clicks"""
+        print(f"🎯 Direct recipe start requested: {recipe_name}")
+        
+        # Find exact match
+        for recipe_id, recipe in self.recipes.items():
+            if recipe['name'].lower() == recipe_name.lower():
+                return self._start_recipe(recipe_id, recipe)
+        
+        # If not found, try contains match
+        for recipe_id, recipe in self.recipes.items():
+            if recipe_name.lower() in recipe['name'].lower():
+                return self._start_recipe(recipe_id, recipe)
+        
+        return f"Recipe '{recipe_name}' not found. Available recipes: {', '.join([r['name'] for r in self.recipes.values()])}"
+    
+   
+    
+    def get_statistics(self) -> Dict:
+        """Get usage statistics"""
+        total_queries = len([m for m in self.state.messages if m.role == "user"])
+        avg_latency = 0.1  # Placeholder
+        
+        return {
+            "total_queries": total_queries,
+            "average_latency": f"{avg_latency:.2f}s",
+            "current_recipe": self.state.current_recipe_name,
+            "current_step": f"{self.state.current_step}/{self.state.total_steps}",
+            "conversation_history": len(self.state.messages)
+        }
+    
+    def process_query(self, query: str) -> Tuple[str, float]:
+            """Process user query with COMPLETE enhanced handlers"""
+            start_time = time.time()
+            
+            # Apply spell correction first to all queries
+            corrected_query = self._correct_spelling(query)
+            query_lower = corrected_query.lower().strip()
+            
+            print(f"🔍 Processing: '{query}' -> '{corrected_query}'")
+
+            # HIGHEST PRIORITY: Handle substitution questions (ALWAYS USE LLM)
+            substitution_response = self._handle_substitution_query(query)
+            if substitution_response:
+                latency = time.time() - start_time
+                self._update_conversation_history(query, substitution_response)
+                return substitution_response, latency
+
+            # HIGH PRIORITY: Handle mixed intents
+            mixed_response = self._handle_mixed_intent(query)
+            if mixed_response:
+                latency = time.time() - start_time
+                self._update_conversation_history(query, mixed_response)
+                return mixed_response, latency
+
+            # HIGH PRIORITY: Handle recipe switching
+            switch_response = self._handle_recipe_switch(query)
+            if switch_response:
+                latency = time.time() - start_time
+                self._update_conversation_history(query, switch_response)
+                return switch_response, latency
+
+            # MEDIUM PRIORITY: Handle multi-step requests
+            multi_step_response = self._handle_multi_step_request(query)
+            if multi_step_response:
+                latency = time.time() - start_time
+                self._update_conversation_history(query, multi_step_response)
+                return multi_step_response, latency
+
+            # MEDIUM PRIORITY: Handle quantity adjustments
+            quantity_response = self._handle_quantity_adjustment(query)
+            if quantity_response:
+                latency = time.time() - start_time
+                self._update_conversation_history(query, quantity_response)
+                return quantity_response, latency
+
+            # MEDIUM PRIORITY: Handle equipment substitutions
+            equipment_response = self._handle_equipment_substitution(query)
+            if equipment_response:
+                latency = time.time() - start_time
+                self._update_conversation_history(query, equipment_response)
+                return equipment_response, latency
+
+            # NOW: Handle navigation commands with spell correction and fuzzy matching
+            if self.state.current_recipe and self._is_clear_navigation(query):
+                print("🎯 Detected clear navigation command")
+                response = self._handle_navigation(query)
+                latency = time.time() - start_time
+                self._update_conversation_history(query, response)
+                return response, latency
+
+            # Handle recipe start commands with fuzzy matching
+            start_patterns = ["start", "make", "cook", "begin", "recipe", "prepare", "bake", "i want to make"]
+            if any(self._fuzzy_match(pattern, query_lower, threshold=0.6) for pattern in start_patterns) and not self.state.current_recipe:
+                print("🎯 Detected start command")
+                response = self._handle_start_recipe(query)
+                latency = time.time() - start_time
+                self._update_conversation_history(query, response)
+                return response, latency
+
+            # If we have active recipe, use RAG with recipe context
+            if self.state.current_recipe:
+                print("🎯 Using RAG with recipe context")
+                context, sources = self.retrieve_context(query, k=3)
+                
+                if context:
+                    response = self.llm.generate_with_history(
+                        prompt=query,
+                        context=context,
+                        conversation_history=self.state.messages,
+                        recipe_name=self.state.current_recipe_name
+                    )
+                else:
+                    # Check if this is a general cooking question
+                    cooking_questions = ["how", "what", "why", "when", "can i", "should i", "do i need"]
+                    if any(self._fuzzy_match(q_word, query_lower, 0.5) for q_word in cooking_questions):
+                        response = "I'm not sure about that specific question for this recipe. Try asking about ingredients, steps, timing, or cooking techniques."
+                    else:
+                        # Only show current step for very short queries that might be navigation
+                        if len(query_lower.split()) <= 2:
+                            recipe = self.recipes.get(self.state.current_recipe)
+                            if self.state.current_step > 0:
+                                current_step = recipe['steps'][self.state.current_step - 1]
+                                response = f"Step {self.state.current_step}: {current_step['instruction']}"
+                            else:
+                                response = "Say 'next' to start the first step!"
+                        else:
+                            recipe = self.recipes.get(self.state.current_recipe)
+                            response = f"I'm helping you with {recipe['name']}. Ask me about the recipe, ingredients, or say 'next' to continue!"
+                
+                latency = time.time() - start_time
+                self._update_conversation_history(query, response)
+                return response, latency
+
+            # No active recipe - general cooking help
+            print("🎯 General cooking query")
+            context, sources = self.retrieve_context(query, k=3)
+            
+            if context:
+                response = self.llm.generate_with_history(
+                    prompt=query,
+                    context=context,
+                    conversation_history=self.state.messages,
+                    recipe_name=None
+                )
+            else:
+                # Suggest starting a recipe
+                available = ', '.join([f'"{r["name"]}"' for r in self.recipes.values()])
+                response = f"I'd love to help you cook! Available recipes: {available}. Try 'start pasta carbonara' or 'make chocolate chip cookies'."
+            
+            latency = time.time() - start_time
+            self._update_conversation_history(query, response)
+            return response, latency
     
     def chat(self, use_voice: bool = False):
         """Interactive chat interface"""
         print("\n" + "="*60)
-        print("🍳 CookMate Voice Assistant")
+        print("🍳 CookMate Voice Assistant (Improved RAG + History)")
         print("="*60)
         print("\n💬 Try saying:")
         print("  • 'Start pasta carbonara'")
@@ -1149,25 +1452,13 @@ Ingredients:
             except Exception as e:
                 print(f"\n❌ Error: {e}")
                 continue
-    
-    def get_statistics(self) -> Dict:
-        """Get usage statistics"""
-        total_queries = len(self.state.conversation_history)
-        avg_latency = sum(q['latency'] for q in self.state.conversation_history) / total_queries if total_queries > 0 else 0
-        
-        return {
-            "total_queries": total_queries,
-            "average_latency": f"{avg_latency:.2f}s",
-            "current_recipe": self.state.current_recipe_name,
-            "current_step": f"{self.state.current_step}/{self.state.total_steps}"
-        }
 
 
 # Main execution
 if __name__ == "__main__":
     import sys
     
-    print("\n🚀 Starting CookMate...\n")
+    print("\n🚀 Starting CookMate (Improved RAG Version)...\n")
     
     # Initialize system
     cookmate = CookMateRAG(

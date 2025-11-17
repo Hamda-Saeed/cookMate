@@ -67,7 +67,7 @@
     "steps": [
       {
         "step": 1,
-        "instruction": "Preheat oven to 375\u00b0F (190\u00b0C). Line baking sheets with parchment paper.",
+        "instruction": "Preheat oven to 375°F (190°C). Line baking sheets with parchment paper.",
         "duration": "2 minutes"
       },
       {
@@ -91,6 +91,160 @@
         "instruction": "Drop rounded tablespoons of dough onto prepared sheets, 2 inches apart. Bake 9-11 minutes until golden.",
         "duration": "12 minutes",
         "tips": "Don't overbake - they'll firm up as they cool"
+      }
+    ]
+  },
+  "spaghetti_bolognese": {
+    "name": "Spaghetti Bolognese",
+    "prep_time": "15 minutes",
+    "cook_time": "45 minutes",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "400g spaghetti",
+      "500g ground beef",
+      "1 onion, chopped",
+      "2 cloves garlic, minced",
+      "400g canned tomatoes",
+      "2 tbsp tomato paste",
+      "1 carrot, diced",
+      "1 celery stick, diced",
+      "1 tsp dried oregano",
+      "Salt and pepper",
+      "Olive oil"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Heat olive oil in a pan, sauté onions, garlic, carrot, and celery until soft.",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Add ground beef and cook until browned.",
+        "duration": "7 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Stir in tomato paste, canned tomatoes, oregano, salt, and pepper. Simmer gently.",
+        "duration": "25 minutes",
+        "tips": "Stir occasionally to prevent sticking."
+      },
+      {
+        "step": 4,
+        "instruction": "Cook spaghetti according to package instructions, drain and combine with sauce.",
+        "duration": "10 minutes"
+      }
+    ]
+  },
+  "classic_pancakes": {
+    "name": "Classic Pancakes",
+    "prep_time": "10 minutes",
+    "cook_time": "15 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 1/2 cups all-purpose flour",
+      "3 1/2 tsp baking powder",
+      "1 tsp salt",
+      "1 tbsp sugar",
+      "1 1/4 cups milk",
+      "1 egg",
+      "3 tbsp butter, melted"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "In a bowl, mix flour, baking powder, salt, and sugar.",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Make a well in the center, add milk, egg, and melted butter. Mix until smooth.",
+        "duration": "3 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Heat a lightly oiled griddle or pan. Pour batter to form pancakes.",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Cook until bubbles form, flip, cook until golden.",
+        "duration": "5 minutes"
+      }
+    ]
+  },
+  "guacamole": {
+    "name": "Easy Guacamole",
+    "prep_time": "10 minutes",
+    "cook_time": "0 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "3 ripe avocados",
+      "1 lime, juiced",
+      "1/2 tsp salt",
+      "1/2 cup diced onion",
+      "2 tomatoes, diced",
+      "1 tbsp chopped cilantro",
+      "1 clove garlic, minced",
+      "1 pinch cayenne pepper"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Cut avocados, remove pit, scoop into a bowl.",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Mash avocados with a fork, leaving some chunks.",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Add lime juice, salt, onion, tomatoes, cilantro, garlic, and cayenne. Mix gently.",
+        "duration": "3 minutes",
+        "tips": "Taste and adjust seasoning as needed."
+      }
+    ]
+  },
+  "french_toast": {
+    "name": "Classic French Toast",
+    "prep_time": "5 minutes",
+    "cook_time": "10 minutes",
+    "servings": 2,
+    "difficulty": "Easy",
+    "ingredients": [
+      "4 slices of bread",
+      "2 eggs",
+      "1/2 cup milk",
+      "1 tsp vanilla extract",
+      "1/2 tsp cinnamon",
+      "Butter for frying",
+      "Maple syrup for serving"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Whisk eggs, milk, vanilla, and cinnamon in a bowl.",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Dip each slice of bread into the egg mixture, coating both sides.",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Heat butter in a pan and cook bread slices until golden brown on both sides.",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Serve hot with maple syrup.",
+        "duration": "1 minute"
       }
     ]
   }

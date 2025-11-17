@@ -45,8 +45,41 @@ from scipy.io.wavfile import write
 
 # Ollama for local LLM (best free option)
 import requests
+embedding_model = SentenceTransformer('all-MiniLM-L6-v2')  # lightweight & fast
+def embed_text(text: str):
+    """Return vector embedding for a given text"""
+    return embedding_model.encode(text, convert_to_numpy=True, normalize_embeddings=True)
+def cosine_similarity(vec1, vec2):
+    """Compute cosine similarity between two vectors"""
+    return np.dot(vec1, vec2) / (np.linalg.norm(vec1) * np.linalg.norm(vec2))
 
-
+FILLER_WORDS = {
+    "ok", "okay", "okk", "k", "kk",
+    "yeah", "yea", "ya", "yup", "yep",
+    "hmm", "hmmm", "hm",
+    "uh", "uhh", "uhhh",
+    "huh", "huhu",
+    "right", "alright", "aight",
+    "sure", "fine",
+    "cool", "nice", "great", "good",
+    "hehe", "haha",
+    "lol", "lmao",
+    "hmm ok", "ok then",
+    "got it", "gotcha",
+    "makes sense", "i see",
+    "hmm right",
+    "hmm okay"
+}
+def is_filler_message(message: str) -> bool:
+        message_clean = message.strip().lower()
+        if len(message_clean) <= 2:
+            return True
+        if message_clean in FILLER_WORDS:
+            return True
+        for f in FILLER_WORDS:
+            if message_clean.startswith(f) or message_clean.endswith(f):
+                return True
+            return False
 @dataclass
 class RecipeStep:
     step_number: int
@@ -81,7 +114,7 @@ class GroqLLM:
         
         """Get Groq API key from environment or user input"""
         import os
-        api_key = os.getenv(key)
+        api_key = os.getenv("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")
         if not api_key:
             print("🔑 Please set your Groq API key:")
             print("   1. Get free API key from: https://console.groq.com/keys")
@@ -266,54 +299,61 @@ class OllamaLLM:
 
 class CookMateRAG:
     """Complete CookMate system with all features"""
-    
-    def __init__(self, 
-                 recipe_data_path: str = "recipes.json",
-                 use_whisper: bool = True,
-                 whisper_model: str = "base"):
-        """
-        Initialize complete CookMate system
-        
-        Args:
-            recipe_data_path: Path to recipe JSON
-            use_whisper: Enable voice input
-            whisper_model: Whisper model size (tiny/base/small)
-        """
+    def __init__(
+    self, 
+    recipe_data_path: str = "recipes.json",
+    use_whisper: bool = True,
+    whisper_model: str = "base"
+):
         print("🍳 Initializing CookMate...")
         self.state = ConversationState()
-        
-        # Load recipes
+
         print("📚 Loading recipes...")
         self.recipes = self._load_recipes(recipe_data_path)
-        
-        # Initialize embedding model (free from HuggingFace)
+    
         print("🧠 Loading embedding model...")
         self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
-        
-        # Initialize ChromaDB
+    
+        print("🔹 Preparing recipe embeddings...")
+        self.recipe_chunks = []
+        self._prepare_recipe_chunks()
+  
         print("💾 Setting up vector database...")
         self.chroma_client = chromadb.Client(Settings(
-            anonymized_telemetry=False,
-            allow_reset=True,
-            is_persistent=False  # Use in-memory for speed
+        anonymized_telemetry=False,
+        allow_reset=True,
+        is_persistent=False  # Use in-memory for speed
         ))
         self.collection = self._setup_vector_db()
-        
-        # Initialize LLM (Ollama - completely free local LLM)
         print("🤖 Connecting to Groq LLM...")
         self.llm = GroqLLM(model="llama-3.1-8b-instant")  # ← Use the new model name
-        
-        # Initialize ASR
+    
         self.whisper_model = None
         if use_whisper:
             print(f"🎤 Loading Whisper ({whisper_model})...")
             self.whisper_model = whisper.load_model(whisper_model)
-        
-        # Initialize TTS
         pygame.mixer.init()
-        
         print("✅ CookMate ready!\n")
-    
+
+    def _prepare_recipe_chunks(self):
+        for recipe_id, recipe in self.recipes.items():
+            ingredients_text = f"Recipe: {recipe['name']}\nIngredients:\n" + "\n".join(recipe['ingredients'])
+            self.recipe_chunks.append({
+            "recipe_id": recipe_id,
+            "text": ingredients_text,
+            "vector": self.embedding_model.encode(ingredients_text, convert_to_numpy=True, normalize_embeddings=True)
+        })
+
+        # Steps as separate chunks
+        for step in recipe['steps']:
+            step_text = f"Recipe: {recipe['name']}\nStep {step['step']}: {step['instruction']}"
+            if step.get("tips"):
+                step_text += f" Tips: {step['tips']}"
+            self.recipe_chunks.append({
+                "recipe_id": recipe_id,
+                "text": step_text,
+                "vector": self.embedding_model.encode(step_text, convert_to_numpy=True, normalize_embeddings=True)
+            })
     def _load_recipes(self, path: str) -> Dict:
         """Load recipes from JSON"""
         if os.path.exists(path):
@@ -535,25 +575,18 @@ Ingredients:
             os.remove(audio_path)
         except:
             pass
-    
-    def retrieve_context(self, query: str, k: int = 3) -> List[Dict]:
-        """Retrieve relevant context using RAG"""
-        query_embedding = self.embedding_model.encode([query])[0].tolist()
-        
-        results = self.collection.query(
-            query_embeddings=[query_embedding],
-            n_results=k
-        )
-        
-        contexts = []
-        for i in range(len(results['documents'][0])):
-            contexts.append({
-                "content": results['documents'][0][i],
-                "metadata": results['metadatas'][0][i],
-                "distance": results['distances'][0][i]
-            })
-        
-        return contexts
+    def retrieve_context(self, query: str, k: int = 3):
+        query_vec = embed_text(query)
+        if self.state.current_recipe:
+            relevant_chunks = [c for c in self.recipe_chunks if c['recipe_id'] == self.state.current_recipe]
+        else:
+            relevant_chunks = self.recipe_chunks
+        similarities = []
+        for chunk in relevant_chunks:
+            score = cosine_similarity(query_vec, chunk['vector'])
+            similarities.append((score, chunk))
+        similarities.sort(reverse=True, key=lambda x: x[0])
+        return [chunk for score, chunk in similarities[:k]]
     
     def _classify_query(self, query: str) -> str:
         """Classify query type to decide how to handle it"""
@@ -947,7 +980,7 @@ Ingredients:
         if not contexts:
             return "I don't have specific substitution info for that. Generally, you can substitute similar ingredients (butter↔oil, milk↔cream, etc.)"
         
-        context_str = "\n".join([c["content"] for c in contexts])
+        context_str = "\n".join([c["text"] for c in contexts])
         
         # Try LLM only if available, otherwise give direct answer
         if self.llm.available:
@@ -973,7 +1006,7 @@ Ingredients:
         # No active step, search recipes
         contexts = self.retrieve_context(query, k=2)
         if contexts:
-            return contexts[0]["content"]
+            return contexts[0]["text"]
         
         return "Please start a recipe first, then I can tell you timing for each step."
     
@@ -985,7 +1018,7 @@ Ingredients:
             return f"For {recipe['name']}, you need:\n{ingredients}"
         
         contexts = self.retrieve_context(query, k=2)
-        return contexts[0]["content"] if contexts else "Please start a recipe first."
+        return contexts[0]["text"] if contexts else "Please start a recipe first."
     
     def _handle_general_question(self, query: str) -> str:
         """Handle general non-cooking questions with better filtering"""
@@ -1040,7 +1073,7 @@ Ingredients:
         if any(keyword in query_lower for keyword in cooking_keywords):
             contexts = self.retrieve_context(query, k=2)
             if contexts:
-                return contexts[0]["content"]
+                return contexts[0]["text"]
         
         # Last resort
         return "I'm here to help with cooking! Try asking about recipes, ingredients, cooking times, or substitutions. What would you like to know? 🍳"
@@ -1069,7 +1102,7 @@ Ingredients:
             
             # Add retrieved contexts
             for ctx in contexts:
-                recipe_context += ctx["content"] + "\n\n"
+                recipe_context += ctx["text"] + "\n\n"
             
             # Try LLM with timeout handling
             if self.llm.available:
@@ -1081,10 +1114,10 @@ Ingredients:
                     pass
             
             # Fallback: return the most relevant context directly
-            return contexts[0]["content"]
+            return contexts[0]["text"]
         
         # No active recipe - use RAG results directly
-        context_str = contexts[0]["content"]
+        context_str = contexts[0]["text"]
         
         # Try LLM
         if self.llm.available:
@@ -1161,8 +1194,6 @@ Ingredients:
             "current_recipe": self.state.current_recipe_name,
             "current_step": f"{self.state.current_step}/{self.state.total_steps}"
         }
-
-
 # Main execution
 if __name__ == "__main__":
     import sys

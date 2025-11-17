@@ -5,7 +5,7 @@ Web interface for the voice-driven recipe assistant
 
 import streamlit as st
 import time
-from cookmate_rag import CookMateRAG,ConversationState
+from cookmate_rag import CookMateRAG,ConversationState, is_filler_message
 import plotly.graph_objects as go
 import pandas as pd
 from datetime import datetime
@@ -155,9 +155,15 @@ with col2:
 
 # Process user input
 if user_input:
+    
     # Add user message
     st.session_state.messages.append({"role": "user", "content": user_input})
-    
+    if is_filler_message(user_input):
+        st.session_state.messages.append({
+            "role": "assistant",
+            "content": "Sure 😊 Let me know what you'd like to do next!"
+        })
+        st.rerun()
     # Show thinking message
     with st.spinner("🤔 Thinking..."):
         try:

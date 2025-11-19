@@ -1,250 +1,4983 @@
 {
-  "pasta_carbonara": {
-    "name": "Classic Pasta Carbonara",
-    "prep_time": "10 minutes",
-    "cook_time": "20 minutes",
+  "kung_pao_stir_fry": {
+    "name": "Kung Pao Stir Fry",
+    "prep_time": "12 minutes",
+    "cook_time": "14 minutes",
     "servings": 4,
-    "difficulty": "Medium",
-    "ingredients": [
-      "400g spaghetti",
-      "200g pancetta or guanciale, diced",
-      "4 large eggs",
-      "100g Pecorino Romano cheese, grated",
-      "50g Parmesan cheese, grated",
-      "Freshly ground black pepper",
-      "Salt for pasta water"
-    ],
-    "steps": [
-      {
-        "step": 1,
-        "instruction": "Bring a large pot of salted water to a rolling boil. Add spaghetti and cook until al dente, about 8-10 minutes.",
-        "duration": "10 minutes",
-        "tips": "Save 1 cup of pasta water before draining!"
-      },
-      {
-        "step": 2,
-        "instruction": "While pasta cooks, heat a large pan over medium heat. Add diced pancetta and cook until golden and crispy.",
-        "duration": "5 minutes",
-        "tips": "No oil needed - pancetta has enough fat"
-      },
-      {
-        "step": 3,
-        "instruction": "In a bowl, whisk together eggs, Pecorino, Parmesan, and lots of black pepper until smooth and well combined.",
-        "duration": "2 minutes",
-        "tips": "Use room temperature eggs for best results"
-      },
-      {
-        "step": 4,
-        "instruction": "Drain pasta and immediately add to the pan with pancetta. Remove from heat.",
-        "duration": "1 minute",
-        "tips": "Work quickly while pasta is hot"
-      },
-      {
-        "step": 5,
-        "instruction": "Pour egg mixture over pasta and toss vigorously. Add pasta water gradually until creamy and silky.",
-        "duration": "2 minutes",
-        "tips": "Keep tossing to prevent scrambling. The residual heat cooks the eggs"
-      }
-    ]
-  },
-  "chocolate_chip_cookies": {
-    "name": "Perfect Chocolate Chip Cookies",
-    "prep_time": "15 minutes",
-    "cook_time": "12 minutes",
-    "servings": 24,
     "difficulty": "Easy",
     "ingredients": [
-      "2 cups all-purpose flour",
-      "1 tsp baking soda",
-      "1 tsp salt",
-      "1 cup butter, softened",
-      "3/4 cup granulated sugar",
-      "3/4 cup brown sugar",
-      "2 large eggs",
-      "2 tsp vanilla extract",
-      "2 cups chocolate chips"
+      "1 cup vegetables",
+      "200g soy sauce",
+      "1/4 cup oil",
+      "3 cloves garlic, minced",
+      "1 cup tortillas",
+      "1 cup paprika"
     ],
     "steps": [
       {
         "step": 1,
-        "instruction": "Preheat oven to 375°F (190°C). Line baking sheets with parchment paper.",
-        "duration": "2 minutes"
-      },
-      {
-        "step": 2,
-        "instruction": "Mix flour, baking soda, and salt in a bowl. Set aside.",
-        "duration": "2 minutes"
-      },
-      {
-        "step": 3,
-        "instruction": "Beat softened butter with both sugars until fluffy, about 3 minutes. Add eggs and vanilla, beat well.",
-        "duration": "5 minutes",
-        "tips": "Butter should be soft but not melted"
-      },
-      {
-        "step": 4,
-        "instruction": "Gradually add flour mixture to butter mixture. Stir in chocolate chips.",
-        "duration": "3 minutes"
-      },
-      {
-        "step": 5,
-        "instruction": "Drop rounded tablespoons of dough onto prepared sheets, 2 inches apart. Bake 9-11 minutes until golden.",
-        "duration": "12 minutes",
-        "tips": "Don't overbake - they'll firm up as they cool"
-      }
-    ]
-  },
-  "spaghetti_bolognese": {
-    "name": "Spaghetti Bolognese",
-    "prep_time": "15 minutes",
-    "cook_time": "45 minutes",
-    "servings": 4,
-    "difficulty": "Medium",
-    "ingredients": [
-      "400g spaghetti",
-      "500g ground beef",
-      "1 onion, chopped",
-      "2 cloves garlic, minced",
-      "400g canned tomatoes",
-      "2 tbsp tomato paste",
-      "1 carrot, diced",
-      "1 celery stick, diced",
-      "1 tsp dried oregano",
-      "Salt and pepper",
-      "Olive oil"
-    ],
-    "steps": [
-      {
-        "step": 1,
-        "instruction": "Heat olive oil in a pan, sauté onions, garlic, carrot, and celery until soft.",
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
         "duration": "5 minutes"
       },
       {
         "step": 2,
-        "instruction": "Add ground beef and cook until browned.",
-        "duration": "7 minutes"
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
       },
       {
         "step": 3,
-        "instruction": "Stir in tomato paste, canned tomatoes, oregano, salt, and pepper. Simmer gently.",
-        "duration": "25 minutes",
-        "tips": "Stir occasionally to prevent sticking."
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
       },
       {
         "step": 4,
-        "instruction": "Cook spaghetti according to package instructions, drain and combine with sauce.",
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes"
+      },
+      {
+        "step": 8,
+        "instruction": "Continue cooking process for stir fry.",
+        "duration": "5 minutes"
+      }
+    ]
+  },
+  "curry_chicken": {
+    "name": "Curry Chicken",
+    "prep_time": "12 minutes",
+    "cook_time": "40 minutes",
+    "servings": 3,
+    "difficulty": "Medium",
+    "ingredients": [
+      "400g chicken breast",
+      "to taste salt",
+      "1 tsp pepper",
+      "3 tbsp oil",
+      "1/2 cup celery",
+      "200g bread",
+      "2 cups cumin",
+      "1/2 cup bacon"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 8,
+        "instruction": "Continue cooking process for chicken.",
+        "duration": "5 minutes"
+      }
+    ]
+  },
+  "fish_tacos": {
+    "name": "Fish Tacos",
+    "prep_time": "17 minutes",
+    "cook_time": "15 minutes",
+    "servings": 5,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 cup tortillas",
+      "1 cup meat",
+      "2 onion, diced",
+      "2 cups cilantro",
+      "2 cups water",
+      "1/2 cup bread"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes",
+        "tips": "Make sure to taste as you go"
+      }
+    ]
+  },
+  "tofu_stir_fry": {
+    "name": "Tofu Stir Fry",
+    "prep_time": "19 minutes",
+    "cook_time": "17 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "200g vegetables",
+      "200g soy sauce",
+      "1/4 cup oil",
+      "2 cloves garlic, minced",
+      "1 cup cumin",
+      "200g spinach",
+      "1 cup milk",
+      "2 cups shrimp",
+      "1 cup zucchini"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 8,
+        "instruction": "Continue cooking process for stir fry.",
+        "duration": "8 minutes",
+        "tips": "Make sure to taste as you go"
+      }
+    ]
+  },
+  "asian_salad": {
+    "name": "Asian Salad",
+    "prep_time": "11 minutes",
+    "cook_time": "5 minutes",
+    "servings": 2,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 cup lettuce",
+      "3 tbsp olive oil",
+      "1/2 tsp salt",
+      "1/2 tsp pepper",
+      "1 cup water"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      }
+    ]
+  },
+  "waldorf_salad": {
+    "name": "Waldorf Salad",
+    "prep_time": "11 minutes",
+    "cook_time": "5 minutes",
+    "servings": 3,
+    "difficulty": "Easy",
+    "ingredients": [
+      "200g lettuce",
+      "3 tbsp olive oil",
+      "1 tsp salt",
+      "1/2 tsp pepper",
+      "1 cup soy sauce",
+      "200g tofu",
+      "2 cups tomato",
+      "200g oregano",
+      "2 cups broccoli",
+      "1/4 cup butter"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      }
+    ]
+  },
+  "carbonara_pasta": {
+    "name": "Carbonara Pasta",
+    "prep_time": "14 minutes",
+    "cook_time": "11 minutes",
+    "servings": 5,
+    "difficulty": "Medium",
+    "ingredients": [
+      "300g pasta",
+      "1/4 cup olive oil",
+      "4 cloves garlic, minced",
+      "1/2 tsp salt",
+      "to taste pepper",
+      "2 cups tomato",
+      "1 cup bacon"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      }
+    ]
+  },
+  "lentil_soup": {
+    "name": "Lentil Soup",
+    "prep_time": "20 minutes",
+    "cook_time": "29 minutes",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "200g broth",
+      "1 tsp salt",
+      "1/2 tsp pepper",
+      "2 onion, diced",
+      "200g tomato"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Adjust seasoning to your preference"
+      }
+    ]
+  },
+  "beef_tacos": {
+    "name": "Beef Tacos",
+    "prep_time": "23 minutes",
+    "cook_time": "30 minutes",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "1/2 cup tortillas",
+      "1/2 cup meat",
+      "2 onion, diced",
+      "1 cup cilantro",
+      "2 cups celery",
+      "200g eggs",
+      "2 cups soy sauce"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      }
+    ]
+  },
+  "arrabbiata_pasta": {
+    "name": "Arrabbiata Pasta",
+    "prep_time": "15 minutes",
+    "cook_time": "22 minutes",
+    "servings": 3,
+    "difficulty": "Medium",
+    "ingredients": [
+      "300g pasta",
+      "1/4 cup olive oil",
+      "2 cloves garlic, minced",
+      "1 tsp salt",
+      "1 tsp pepper",
+      "200g thyme",
+      "200g tomato"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Don't overcook - check frequently"
+      }
+    ]
+  },
+  "alfredo_chicken": {
+    "name": "Alfredo Chicken",
+    "prep_time": "10 minutes",
+    "cook_time": "34 minutes",
+    "servings": 5,
+    "difficulty": "Hard",
+    "ingredients": [
+      "300g chicken breast",
+      "to taste salt",
+      "to taste pepper",
+      "2 tbsp oil",
+      "200g pork",
+      "3 tbsp sesame oil",
+      "1 cup thyme",
+      "1/2 cup tortillas",
+      "1/2 cup soy sauce",
+      "200g pasta"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      }
+    ]
+  },
+  "risotto_rice": {
+    "name": "Risotto Rice",
+    "prep_time": "8 minutes",
+    "cook_time": "32 minutes",
+    "servings": 5,
+    "difficulty": "Medium",
+    "ingredients": [
+      "200g rice",
+      "1/2 cup water",
+      "to taste salt",
+      "1/4 cup butter",
+      "2 cups celery",
+      "2 cups thyme",
+      "1/2 cup rosemary",
+      "1/2 cup parmesan"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      }
+    ]
+  },
+  "sticky_rice": {
+    "name": "Sticky Rice",
+    "prep_time": "7 minutes",
+    "cook_time": "45 minutes",
+    "servings": 4,
+    "difficulty": "Hard",
+    "ingredients": [
+      "400g rice",
+      "1 cup water",
+      "to taste salt",
+      "1/4 cup butter",
+      "1/2 cup zucchini",
+      "200g eggs",
+      "1/2 cup wine",
+      "1/2 cup bread"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Use fresh ingredients for best results"
+      }
+    ]
+  },
+  "tart_dessert": {
+    "name": "Tart Dessert",
+    "prep_time": "25 minutes",
+    "cook_time": "35 minutes",
+    "servings": 10,
+    "difficulty": "Medium",
+    "ingredients": [
+      "2 cups sugar",
+      "1 cup flour",
+      "1 cup eggs",
+      "3 tbsp butter",
+      "2 cups mushroom",
+      "200g bread"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      }
+    ]
+  },
+  "caprese_salad": {
+    "name": "Caprese Salad",
+    "prep_time": "14 minutes",
+    "cook_time": "0 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 cup lettuce",
+      "2 tbsp olive oil",
+      "1/2 tsp salt",
+      "1 tsp pepper",
+      "1 cup celery",
+      "200g rice",
+      "1/2 cup soy sauce"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Adjust seasoning to your preference"
+      }
+    ]
+  },
+  "beef_stir_fry": {
+    "name": "Beef Stir Fry",
+    "prep_time": "10 minutes",
+    "cook_time": "18 minutes",
+    "servings": 2,
+    "difficulty": "Easy",
+    "ingredients": [
+      "200g vegetables",
+      "1/2 cup soy sauce",
+      "1/4 cup oil",
+      "2 cloves garlic, minced",
+      "1/2 cup tortillas"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Don't overcook - check frequently"
+      }
+    ]
+  },
+  "shrimp_stir_fry": {
+    "name": "Shrimp Stir Fry",
+    "prep_time": "13 minutes",
+    "cook_time": "16 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1/2 cup vegetables",
+      "1/2 cup soy sauce",
+      "2 tbsp oil",
+      "2 cloves garlic, minced",
+      "to taste bell pepper",
+      "2 tbsp olive oil"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      }
+    ]
+  },
+  "minestrone_soup": {
+    "name": "Minestrone Soup",
+    "prep_time": "19 minutes",
+    "cook_time": "38 minutes",
+    "servings": 6,
+    "difficulty": "Medium",
+    "ingredients": [
+      "1 cup broth",
+      "to taste salt",
+      "1/2 tsp pepper",
+      "1 onion, diced",
+      "2 cups tofu"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes"
+      }
+    ]
+  },
+  "pilaf_rice": {
+    "name": "Pilaf Rice",
+    "prep_time": "10 minutes",
+    "cook_time": "21 minutes",
+    "servings": 5,
+    "difficulty": "Easy",
+    "ingredients": [
+      "300g rice",
+      "1 cup water",
+      "1 tsp salt",
+      "2 tbsp butter",
+      "200g zucchini",
+      "200g yogurt",
+      "200g mozzarella",
+      "200g pork",
+      "2 tbsp sesame oil"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes"
+      }
+    ]
+  },
+  "chicken_noodle_soup": {
+    "name": "Chicken Noodle Soup",
+    "prep_time": "12 minutes",
+    "cook_time": "33 minutes",
+    "servings": 5,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 cup broth",
+      "1/2 tsp salt",
+      "to taste pepper",
+      "1 onion, diced"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes",
+        "tips": "Adjust seasoning to your preference"
+      }
+    ]
+  },
+  "cheeseburger_burger": {
+    "name": "Cheeseburger Burger",
+    "prep_time": "11 minutes",
+    "cook_time": "17 minutes",
+    "servings": 6,
+    "difficulty": "Medium",
+    "ingredients": [
+      "2 cups ground meat",
+      "1/2 cup bun",
+      "1/2 tsp salt",
+      "1/2 tsp pepper",
+      "1 cup vinegar"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
         "duration": "10 minutes"
       }
     ]
   },
-  "classic_pancakes": {
-    "name": "Classic Pancakes",
-    "prep_time": "10 minutes",
-    "cook_time": "15 minutes",
-    "servings": 4,
-    "difficulty": "Easy",
+  "spanish_rice": {
+    "name": "Spanish Rice",
+    "prep_time": "12 minutes",
+    "cook_time": "44 minutes",
+    "servings": 3,
+    "difficulty": "Hard",
     "ingredients": [
-      "1 1/2 cups all-purpose flour",
-      "3 1/2 tsp baking powder",
-      "1 tsp salt",
-      "1 tbsp sugar",
-      "1 1/4 cups milk",
-      "1 egg",
-      "3 tbsp butter, melted"
+      "400g rice",
+      "200g water",
+      "to taste salt",
+      "1/4 cup butter",
+      "2 cups broth",
+      "1/2 cup shrimp",
+      "200g milk"
     ],
     "steps": [
       {
         "step": 1,
-        "instruction": "In a bowl, mix flour, baking powder, salt, and sugar.",
-        "duration": "2 minutes"
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Adjust seasoning to your preference"
       },
       {
         "step": 2,
-        "instruction": "Make a well in the center, add milk, egg, and melted butter. Mix until smooth.",
-        "duration": "3 minutes"
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
       },
       {
         "step": 3,
-        "instruction": "Heat a lightly oiled griddle or pan. Pour batter to form pancakes.",
-        "duration": "5 minutes"
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
       },
       {
         "step": 4,
-        "instruction": "Cook until bubbles form, flip, cook until golden.",
+        "instruction": "Add vegetables and cook until tender",
         "duration": "5 minutes"
       }
     ]
   },
-  "guacamole": {
-    "name": "Easy Guacamole",
+  "parmesan_chicken": {
+    "name": "Parmesan Chicken",
+    "prep_time": "16 minutes",
+    "cook_time": "26 minutes",
+    "servings": 6,
+    "difficulty": "Medium",
+    "ingredients": [
+      "200g chicken breast",
+      "to taste salt",
+      "1/2 tsp pepper",
+      "2 tbsp oil",
+      "1 cup spinach",
+      "1/2 cup zucchini"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      }
+    ]
+  },
+  "black_bean_burger": {
+    "name": "Black Bean Burger",
+    "prep_time": "12 minutes",
+    "cook_time": "17 minutes",
+    "servings": 2,
+    "difficulty": "Medium",
+    "ingredients": [
+      "1/2 cup ground meat",
+      "1/2 cup bun",
+      "1/2 tsp salt",
+      "1 tsp pepper",
+      "400g chicken breast",
+      "2 cups parmesan",
+      "to taste bell pepper"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes"
+      }
+    ]
+  },
+  "stir_fry_chicken": {
+    "name": "Stir Fry Chicken",
+    "prep_time": "15 minutes",
+    "cook_time": "27 minutes",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "500g chicken breast",
+      "to taste salt",
+      "1/2 tsp pepper",
+      "1/4 cup oil",
+      "2 cups thyme"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      }
+    ]
+  },
+  "veggie_burger": {
+    "name": "Veggie Burger",
+    "prep_time": "13 minutes",
+    "cook_time": "15 minutes",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "1/2 cup ground meat",
+      "200g bun",
+      "1 tsp salt",
+      "1 tsp pepper",
+      "1/2 cup mozzarella"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      }
+    ]
+  },
+  "chicken_tacos": {
+    "name": "Chicken Tacos",
+    "prep_time": "16 minutes",
+    "cook_time": "16 minutes",
+    "servings": 6,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 cup tortillas",
+      "1/2 cup meat",
+      "2 onion, diced",
+      "1 cup cilantro",
+      "200g cheese, grated",
+      "200g celery",
+      "2 cups broccoli"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      }
+    ]
+  },
+  "quattro_formaggi_pizza": {
+    "name": "Quattro Formaggi Pizza",
+    "prep_time": "29 minutes",
+    "cook_time": "19 minutes",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "200g pizza dough",
+      "1/2 cup tomato sauce",
+      "100g cheese, grated",
+      "1 tsp salt"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes",
+        "tips": "Make sure to taste as you go"
+      }
+    ]
+  },
+  "pudding_dessert": {
+    "name": "Pudding Dessert",
+    "prep_time": "21 minutes",
+    "cook_time": "60 minutes",
+    "servings": 11,
+    "difficulty": "Medium",
+    "ingredients": [
+      "2 cups sugar",
+      "1 cup flour",
+      "200g eggs",
+      "1/4 cup butter",
+      "1 cup parmesan",
+      "2 cups water",
+      "2 cups fish"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      }
+    ]
+  },
+  "quinoa_salad": {
+    "name": "Quinoa Salad",
+    "prep_time": "14 minutes",
+    "cook_time": "1 minutes",
+    "servings": 2,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 cup lettuce",
+      "3 tbsp olive oil",
+      "to taste salt",
+      "1 tsp pepper",
+      "2 cups parmesan",
+      "2 cups rosemary",
+      "2 cups shrimp"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      }
+    ]
+  },
+  "mediterranean_salad": {
+    "name": "Mediterranean Salad",
+    "prep_time": "14 minutes",
+    "cook_time": "4 minutes",
+    "servings": 3,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1/2 cup lettuce",
+      "2 tbsp olive oil",
+      "1/2 tsp salt",
+      "to taste pepper",
+      "1/2 cup water",
+      "1 cup broccoli",
+      "400g pasta"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      }
+    ]
+  },
+  "pho_soup": {
+    "name": "Pho Soup",
+    "prep_time": "12 minutes",
+    "cook_time": "24 minutes",
+    "servings": 7,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 cup broth",
+      "to taste salt",
+      "1 tsp pepper",
+      "2 onion, diced",
+      "1 cup milk",
+      "1/2 cup mozzarella"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes"
+      }
+    ]
+  },
+  "ice_cream_dessert": {
+    "name": "Ice Cream Dessert",
+    "prep_time": "23 minutes",
+    "cook_time": "44 minutes",
+    "servings": 10,
+    "difficulty": "Medium",
+    "ingredients": [
+      "200g sugar",
+      "200g flour",
+      "1 cup eggs",
+      "1/4 cup butter",
+      "200g carrot",
+      "1/2 cup shrimp",
+      "1 cup spinach",
+      "1/2 tsp pepper"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes"
+      }
+    ]
+  },
+  "coconut_rice": {
+    "name": "Coconut Rice",
+    "prep_time": "10 minutes",
+    "cook_time": "24 minutes",
+    "servings": 3,
+    "difficulty": "Medium",
+    "ingredients": [
+      "300g rice",
+      "1 cup water",
+      "to taste salt",
+      "3 tbsp butter",
+      "1 onion, diced",
+      "2 cups rosemary",
+      "3 cloves garlic, minced",
+      "1 cup pork",
+      "2 cups broth"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      }
+    ]
+  },
+  "garden_salad": {
+    "name": "Garden Salad",
+    "prep_time": "13 minutes",
+    "cook_time": "2 minutes",
+    "servings": 3,
+    "difficulty": "Easy",
+    "ingredients": [
+      "200g lettuce",
+      "3 tbsp olive oil",
+      "to taste salt",
+      "1/2 tsp pepper",
+      "1/2 cup yogurt"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      }
+    ]
+  },
+  "marsala_chicken": {
+    "name": "Marsala Chicken",
+    "prep_time": "20 minutes",
+    "cook_time": "32 minutes",
+    "servings": 5,
+    "difficulty": "Medium",
+    "ingredients": [
+      "300g chicken breast",
+      "to taste salt",
+      "to taste pepper",
+      "3 tbsp oil",
+      "1 cup celery",
+      "1 cup zucchini",
+      "2 cups carrot",
+      "3 tbsp sesame oil",
+      "1 cup thyme",
+      "200g rice"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes"
+      }
+    ]
+  },
+  "teriyaki_stir_fry": {
+    "name": "Teriyaki Stir Fry",
+    "prep_time": "11 minutes",
+    "cook_time": "15 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 cups vegetables",
+      "1 cup soy sauce",
+      "3 tbsp oil",
+      "2 cloves garlic, minced",
+      "1 cup yogurt"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      }
+    ]
+  },
+  "fried_rice": {
+    "name": "Fried Rice",
+    "prep_time": "15 minutes",
+    "cook_time": "36 minutes",
+    "servings": 6,
+    "difficulty": "Medium",
+    "ingredients": [
+      "300g rice",
+      "200g water",
+      "to taste salt",
+      "3 tbsp butter",
+      "1 cup vinegar"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes",
+        "tips": "Use fresh ingredients for best results"
+      }
+    ]
+  },
+  "bbq_chicken_pizza": {
+    "name": "BBQ Chicken Pizza",
+    "prep_time": "27 minutes",
+    "cook_time": "16 minutes",
+    "servings": 8,
+    "difficulty": "Hard",
+    "ingredients": [
+      "1 cup pizza dough",
+      "200g tomato sauce",
+      "200g cheese, grated",
+      "to taste salt",
+      "2 tbsp butter",
+      "1 cup celery",
+      "200g cream"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Don't overcook - check frequently"
+      }
+    ]
+  },
+  "vegetarian_pizza": {
+    "name": "Vegetarian Pizza",
+    "prep_time": "26 minutes",
+    "cook_time": "17 minutes",
+    "servings": 6,
+    "difficulty": "Hard",
+    "ingredients": [
+      "1/2 cup pizza dough",
+      "1/2 cup tomato sauce",
+      "200g cheese, grated",
+      "1 tsp salt",
+      "200g tortillas",
+      "2 cups tomato",
+      "1/2 cup mushroom",
+      "1/2 tsp bell pepper",
+      "1/2 cup milk"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Don't overcook - check frequently"
+      }
+    ]
+  },
+  "neapolitan_pizza": {
+    "name": "Neapolitan Pizza",
+    "prep_time": "16 minutes",
+    "cook_time": "19 minutes",
+    "servings": 5,
+    "difficulty": "Medium",
+    "ingredients": [
+      "1 cup pizza dough",
+      "1/2 cup tomato sauce",
+      "100g cheese, grated",
+      "to taste salt",
+      "1/2 cup milk",
+      "1 cup shrimp",
+      "400g pasta",
+      "1/2 cup cumin"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 8,
+        "instruction": "Continue cooking process for pizza.",
+        "duration": "6 minutes"
+      }
+    ]
+  },
+  "paella_rice": {
+    "name": "Paella Rice",
+    "prep_time": "14 minutes",
+    "cook_time": "32 minutes",
+    "servings": 3,
+    "difficulty": "Hard",
+    "ingredients": [
+      "300g rice",
+      "1 cup water",
+      "1/2 tsp salt",
+      "3 tbsp butter",
+      "1 tsp bell pepper",
+      "1/2 cup broccoli"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes",
+        "tips": "Make sure to taste as you go"
+      }
+    ]
+  },
+  "biryani_rice": {
+    "name": "Biryani Rice",
+    "prep_time": "12 minutes",
+    "cook_time": "30 minutes",
+    "servings": 6,
+    "difficulty": "Hard",
+    "ingredients": [
+      "400g rice",
+      "1/2 cup water",
+      "1/2 tsp salt",
+      "3 tbsp butter",
+      "1/2 cup broccoli",
+      "2 cups vinegar"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      }
+    ]
+  },
+  "alfredo_pasta": {
+    "name": "Alfredo Pasta",
+    "prep_time": "7 minutes",
+    "cook_time": "25 minutes",
+    "servings": 3,
+    "difficulty": "Easy",
+    "ingredients": [
+      "400g pasta",
+      "3 tbsp olive oil",
+      "4 cloves garlic, minced",
+      "1/2 tsp salt",
+      "1 tsp pepper",
+      "200g vinegar",
+      "200g cheese, grated",
+      "2 cups tofu"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes"
+      },
+      {
+        "step": 8,
+        "instruction": "Continue cooking process for pasta.",
+        "duration": "6 minutes"
+      }
+    ]
+  },
+  "sushi_rice": {
+    "name": "Sushi Rice",
+    "prep_time": "7 minutes",
+    "cook_time": "37 minutes",
+    "servings": 5,
+    "difficulty": "Hard",
+    "ingredients": [
+      "400g rice",
+      "1 cup water",
+      "to taste salt",
+      "1/4 cup butter",
+      "2 cups wine",
+      "1/2 tsp pepper",
+      "1/2 cup basil",
+      "to taste bell pepper",
+      "2 tbsp olive oil"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes"
+      }
+    ]
+  },
+  "marinara_pasta": {
+    "name": "Marinara Pasta",
+    "prep_time": "7 minutes",
+    "cook_time": "24 minutes",
+    "servings": 3,
+    "difficulty": "Medium",
+    "ingredients": [
+      "300g pasta",
+      "1/4 cup olive oil",
+      "2 cloves garlic, minced",
+      "1 tsp salt",
+      "to taste pepper",
+      "1/4 cup vegetable oil",
+      "2 cups soy sauce"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes",
+        "tips": "Adjust seasoning to your preference"
+      }
+    ]
+  },
+  "bbq_burger": {
+    "name": "BBQ Burger",
+    "prep_time": "18 minutes",
+    "cook_time": "13 minutes",
+    "servings": 6,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 cup ground meat",
+      "200g bun",
+      "to taste salt",
+      "to taste pepper",
+      "300g chicken breast",
+      "2 cups shrimp"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      }
+    ]
+  },
+  "salmon_burger": {
+    "name": "Salmon Burger",
+    "prep_time": "18 minutes",
+    "cook_time": "17 minutes",
+    "servings": 6,
+    "difficulty": "Medium",
+    "ingredients": [
+      "200g ground meat",
+      "200g bun",
+      "to taste salt",
+      "1 tsp pepper",
+      "200g parmesan",
+      "1/2 cup eggs",
+      "1 cup wine"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 8,
+        "instruction": "Continue cooking process for burger.",
+        "duration": "6 minutes"
+      }
+    ]
+  },
+  "general_tso_stir_fry": {
+    "name": "General Tso Stir Fry",
+    "prep_time": "17 minutes",
+    "cook_time": "14 minutes",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "1 cup vegetables",
+      "1/2 cup soy sauce",
+      "2 tbsp oil",
+      "3 cloves garlic, minced",
+      "200g pasta",
+      "200g bread",
+      "1 cup bacon",
+      "1/2 cup broth",
+      "100g cheese, grated"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      }
+    ]
+  },
+  "tomato_soup": {
+    "name": "Tomato Soup",
+    "prep_time": "16 minutes",
+    "cook_time": "59 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1/2 cup broth",
+      "1/2 tsp salt",
+      "1 tsp pepper",
+      "2 onion, diced",
+      "200g fish",
+      "1/2 cup bread",
+      "200g cheese, grated",
+      "300g chicken breast"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      }
+    ]
+  },
+  "french_onion_soup": {
+    "name": "French Onion Soup",
+    "prep_time": "20 minutes",
+    "cook_time": "35 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "200g broth",
+      "1/2 tsp salt",
+      "1/2 tsp pepper",
+      "1 onion, diced",
+      "1/2 cup tomato"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Adjust seasoning to your preference"
+      }
+    ]
+  },
+  "pie_dessert": {
+    "name": "Pie Dessert",
+    "prep_time": "26 minutes",
+    "cook_time": "25 minutes",
+    "servings": 11,
+    "difficulty": "Medium",
+    "ingredients": [
+      "1 cup sugar",
+      "2 cups flour",
+      "200g eggs",
+      "3 tbsp butter",
+      "2 cups thyme",
+      "2 cups shrimp",
+      "200g rosemary",
+      "1 cup wine"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Make sure to taste as you go"
+      }
+    ]
+  },
+  "margherita_pizza": {
+    "name": "Margherita Pizza",
+    "prep_time": "24 minutes",
+    "cook_time": "15 minutes",
+    "servings": 6,
+    "difficulty": "Medium",
+    "ingredients": [
+      "200g pizza dough",
+      "1/2 cup tomato sauce",
+      "150g cheese, grated",
+      "1/2 tsp salt",
+      "1/2 cup basil"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Adjust seasoning to your preference"
+      }
+    ]
+  },
+  "pesto_pasta": {
+    "name": "Pesto Pasta",
+    "prep_time": "14 minutes",
+    "cook_time": "11 minutes",
+    "servings": 3,
+    "difficulty": "Easy",
+    "ingredients": [
+      "400g pasta",
+      "1/4 cup olive oil",
+      "2 cloves garlic, minced",
+      "1 tsp salt",
+      "1 tsp pepper",
+      "400g chicken breast",
+      "1 cup parmesan",
+      "200g tofu"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 8,
+        "instruction": "Continue cooking process for pasta.",
+        "duration": "7 minutes"
+      }
+    ]
+  },
+  "tikka_masala_chicken": {
+    "name": "Tikka Masala Chicken",
+    "prep_time": "10 minutes",
+    "cook_time": "32 minutes",
+    "servings": 6,
+    "difficulty": "Hard",
+    "ingredients": [
+      "500g chicken breast",
+      "1 tsp salt",
+      "1 tsp pepper",
+      "1/4 cup oil",
+      "2 cups celery",
+      "2 cups oregano",
+      "2 cups bacon",
+      "3 tbsp sesame oil"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 8,
+        "instruction": "Continue cooking process for chicken.",
+        "duration": "3 minutes"
+      }
+    ]
+  },
+  "turkey_burger": {
+    "name": "Turkey Burger",
+    "prep_time": "15 minutes",
+    "cook_time": "12 minutes",
+    "servings": 3,
+    "difficulty": "Medium",
+    "ingredients": [
+      "200g ground meat",
+      "1 cup bun",
+      "1 tsp salt",
+      "to taste pepper",
+      "2 cups wine"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes"
+      }
+    ]
+  },
+  "cobb_salad": {
+    "name": "Cobb Salad",
+    "prep_time": "16 minutes",
+    "cook_time": "2 minutes",
+    "servings": 2,
+    "difficulty": "Easy",
+    "ingredients": [
+      "200g lettuce",
+      "1/4 cup olive oil",
+      "to taste salt",
+      "1 tsp pepper",
+      "2 tbsp vegetable oil",
+      "1 cup wine",
+      "1 cup eggs",
+      "2 cups mushroom",
+      "1/2 cup spinach"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes"
+      },
+      {
+        "step": 8,
+        "instruction": "Continue cooking process for salad.",
+        "duration": "8 minutes"
+      }
+    ]
+  },
+  "shrimp_tacos": {
+    "name": "Shrimp Tacos",
+    "prep_time": "16 minutes",
+    "cook_time": "29 minutes",
+    "servings": 6,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1/2 cup tortillas",
+      "1 cup meat",
+      "1 onion, diced",
+      "1 cup cilantro",
+      "1/2 cup soy sauce"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes"
+      },
+      {
+        "step": 8,
+        "instruction": "Continue cooking process for tacos.",
+        "duration": "8 minutes"
+      }
+    ]
+  },
+  "tiramisu_dessert": {
+    "name": "Tiramisu Dessert",
+    "prep_time": "25 minutes",
+    "cook_time": "40 minutes",
+    "servings": 10,
+    "difficulty": "Medium",
+    "ingredients": [
+      "2 cups sugar",
+      "2 cups flour",
+      "2 cups eggs",
+      "2 tbsp butter",
+      "1/2 cup soy sauce",
+      "200g shrimp",
+      "400g pasta",
+      "200g milk"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      }
+    ]
+  },
+  "jambalaya_rice": {
+    "name": "Jambalaya Rice",
+    "prep_time": "9 minutes",
+    "cook_time": "17 minutes",
+    "servings": 3,
+    "difficulty": "Easy",
+    "ingredients": [
+      "200g rice",
+      "1/2 cup water",
+      "to taste salt",
+      "2 tbsp butter",
+      "200g soy sauce",
+      "4 cloves garlic, minced",
+      "1/2 cup wine",
+      "200g pasta"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      }
+    ]
+  },
+  "szechuan_stir_fry": {
+    "name": "Szechuan Stir Fry",
+    "prep_time": "10 minutes",
+    "cook_time": "13 minutes",
+    "servings": 3,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 cup vegetables",
+      "200g soy sauce",
+      "2 tbsp oil",
+      "2 cloves garlic, minced",
+      "1 cup bread",
+      "200g broccoli"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes"
+      }
+    ]
+  },
+  "caesar_salad": {
+    "name": "Caesar Salad",
+    "prep_time": "12 minutes",
+    "cook_time": "3 minutes",
+    "servings": 3,
+    "difficulty": "Easy",
+    "ingredients": [
+      "200g lettuce",
+      "3 tbsp olive oil",
+      "1/2 tsp salt",
+      "1 tsp pepper",
+      "1 cup parmesan",
+      "300g rice",
+      "200g bacon",
+      "1 tsp bell pepper",
+      "500g chicken breast",
+      "1/4 cup butter"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 8,
+        "instruction": "Continue cooking process for salad.",
+        "duration": "7 minutes",
+        "tips": "Make sure to taste as you go"
+      }
+    ]
+  },
+  "mousse_dessert": {
+    "name": "Mousse Dessert",
+    "prep_time": "24 minutes",
+    "cook_time": "39 minutes",
+    "servings": 4,
+    "difficulty": "Hard",
+    "ingredients": [
+      "200g sugar",
+      "2 cups flour",
+      "1 cup eggs",
+      "3 tbsp butter",
+      "1/2 cup yogurt"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      }
+    ]
+  },
+  "aglio_e_olio_pasta": {
+    "name": "Aglio e Olio Pasta",
+    "prep_time": "9 minutes",
+    "cook_time": "22 minutes",
+    "servings": 6,
+    "difficulty": "Medium",
+    "ingredients": [
+      "200g pasta",
+      "3 tbsp olive oil",
+      "4 cloves garlic, minced",
+      "to taste salt",
+      "1/2 tsp pepper"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes"
+      },
+      {
+        "step": 8,
+        "instruction": "Continue cooking process for pasta.",
+        "duration": "8 minutes",
+        "tips": "Use fresh ingredients for best results"
+      }
+    ]
+  },
+  "vegetable_soup": {
+    "name": "Vegetable Soup",
+    "prep_time": "17 minutes",
+    "cook_time": "59 minutes",
+    "servings": 6,
+    "difficulty": "Easy",
+    "ingredients": [
+      "200g broth",
+      "to taste salt",
+      "1 tsp pepper",
+      "2 onion, diced",
+      "2 cups mushroom",
+      "1/4 cup butter",
+      "1 cup milk",
+      "2 cups tomato"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      }
+    ]
+  },
+  "cheesecake_dessert": {
+    "name": "Cheesecake Dessert",
+    "prep_time": "18 minutes",
+    "cook_time": "30 minutes",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "1/2 cup sugar",
+      "2 cups flour",
+      "1 cup eggs",
+      "2 tbsp butter",
+      "1/2 cup milk",
+      "150g cheese, grated",
+      "1/2 cup thyme"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      }
+    ]
+  },
+  "pepperoni_pizza": {
+    "name": "Pepperoni Pizza",
+    "prep_time": "21 minutes",
+    "cook_time": "13 minutes",
+    "servings": 3,
+    "difficulty": "Medium",
+    "ingredients": [
+      "1/2 cup pizza dough",
+      "1 cup tomato sauce",
+      "200g cheese, grated",
+      "1/2 tsp salt",
+      "2 cups spinach",
+      "2 cups bacon",
+      "200g rice"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      }
+    ]
+  },
+  "kale_salad": {
+    "name": "Kale Salad",
+    "prep_time": "11 minutes",
+    "cook_time": "4 minutes",
+    "servings": 3,
+    "difficulty": "Easy",
+    "ingredients": [
+      "200g lettuce",
+      "3 tbsp olive oil",
+      "to taste salt",
+      "to taste pepper",
+      "1 cup water",
+      "2 cups tomato",
+      "2 cups cumin",
+      "1/4 cup sesame oil"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 8,
+        "instruction": "Continue cooking process for salad.",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      }
+    ]
+  },
+  "carne_asada_tacos": {
+    "name": "Carne Asada Tacos",
+    "prep_time": "19 minutes",
+    "cook_time": "24 minutes",
+    "servings": 5,
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 cups tortillas",
+      "200g meat",
+      "1 onion, diced",
+      "200g cilantro",
+      "200g paprika"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      }
+    ]
+  },
+  "piccata_chicken": {
+    "name": "Piccata Chicken",
+    "prep_time": "17 minutes",
+    "cook_time": "23 minutes",
+    "servings": 6,
+    "difficulty": "Medium",
+    "ingredients": [
+      "300g chicken breast",
+      "1 tsp salt",
+      "1/2 tsp pepper",
+      "3 tbsp oil",
+      "2 cups mushroom"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Use fresh ingredients for best results"
+      }
+    ]
+  },
+  "barbacoa_tacos": {
+    "name": "Barbacoa Tacos",
+    "prep_time": "25 minutes",
+    "cook_time": "17 minutes",
+    "servings": 5,
+    "difficulty": "Medium",
+    "ingredients": [
+      "2 cups tortillas",
+      "1/2 cup meat",
+      "1 onion, diced",
+      "2 cups cilantro",
+      "2 cups celery",
+      "2 cups mushroom",
+      "1 cup milk"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      }
+    ]
+  },
+  "al_pastor_tacos": {
+    "name": "Al Pastor Tacos",
+    "prep_time": "21 minutes",
+    "cook_time": "22 minutes",
+    "servings": 6,
+    "difficulty": "Medium",
+    "ingredients": [
+      "1 cup tortillas",
+      "1/2 cup meat",
+      "2 onion, diced",
+      "200g cilantro",
+      "2 cups ground beef",
+      "200g cream",
+      "1 cup tomato"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      }
+    ]
+  },
+  "carnitas_tacos": {
+    "name": "Carnitas Tacos",
+    "prep_time": "22 minutes",
+    "cook_time": "22 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 cups tortillas",
+      "2 cups meat",
+      "1 onion, diced",
+      "1 cup cilantro",
+      "1 cup broccoli",
+      "1/2 cup celery"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      }
+    ]
+  },
+  "bolognese_pasta": {
+    "name": "Bolognese Pasta",
+    "prep_time": "6 minutes",
+    "cook_time": "12 minutes",
+    "servings": 3,
+    "difficulty": "Easy",
+    "ingredients": [
+      "300g pasta",
+      "2 tbsp olive oil",
+      "2 cloves garlic, minced",
+      "to taste salt",
+      "1 tsp pepper",
+      "1/4 cup vegetable oil",
+      "1 cup cream",
+      "200g oregano"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Use fresh ingredients for best results"
+      }
+    ]
+  },
+  "pork_stir_fry": {
+    "name": "Pork Stir Fry",
+    "prep_time": "19 minutes",
+    "cook_time": "11 minutes",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "2 cups vegetables",
+      "1 cup soy sauce",
+      "2 tbsp oil",
+      "3 cloves garlic, minced",
+      "200g fish",
+      "1/4 cup olive oil"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 8,
+        "instruction": "Continue cooking process for stir fry.",
+        "duration": "6 minutes",
+        "tips": "Make sure to taste as you go"
+      }
+    ]
+  },
+  "mushroom_soup": {
+    "name": "Mushroom Soup",
+    "prep_time": "15 minutes",
+    "cook_time": "38 minutes",
+    "servings": 7,
+    "difficulty": "Medium",
+    "ingredients": [
+      "1/2 cup broth",
+      "1 tsp salt",
+      "1 tsp pepper",
+      "2 onion, diced",
+      "200g thyme",
+      "1 cup carrot",
+      "200g mushroom"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      }
+    ]
+  },
+  "chicago_deep_dish_pizza": {
+    "name": "Chicago Deep Dish Pizza",
+    "prep_time": "24 minutes",
+    "cook_time": "10 minutes",
+    "servings": 2,
+    "difficulty": "Hard",
+    "ingredients": [
+      "200g pizza dough",
+      "200g tomato sauce",
+      "100g cheese, grated",
+      "1/2 tsp salt",
+      "1 cup parmesan",
+      "1/2 cup broccoli",
+      "1 cup rosemary",
+      "1/2 cup shrimp",
+      "1/4 cup olive oil"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Use fresh ingredients for best results"
+      }
+    ]
+  },
+  "primavera_pasta": {
+    "name": "Primavera Pasta",
+    "prep_time": "9 minutes",
+    "cook_time": "12 minutes",
+    "servings": 5,
+    "difficulty": "Medium",
+    "ingredients": [
+      "300g pasta",
+      "2 tbsp olive oil",
+      "3 cloves garlic, minced",
+      "to taste salt",
+      "1 tsp pepper",
+      "2 tbsp vegetable oil",
+      "1/2 cup basil"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes"
+      },
+      {
+        "step": 8,
+        "instruction": "Continue cooking process for pasta.",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      }
+    ]
+  },
+  "bean_tacos": {
+    "name": "Bean Tacos",
+    "prep_time": "15 minutes",
+    "cook_time": "18 minutes",
+    "servings": 5,
+    "difficulty": "Medium",
+    "ingredients": [
+      "200g tortillas",
+      "1/2 cup meat",
+      "2 onion, diced",
+      "2 cups cilantro",
+      "2 cups broccoli",
+      "2 cups tomato",
+      "300g pasta",
+      "200g milk"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      }
+    ]
+  },
+  "brownies_dessert": {
+    "name": "Brownies Dessert",
+    "prep_time": "23 minutes",
+    "cook_time": "31 minutes",
+    "servings": 9,
+    "difficulty": "Hard",
+    "ingredients": [
+      "200g sugar",
+      "1 cup flour",
+      "1 cup eggs",
+      "3 tbsp butter",
+      "200g thyme"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      }
+    ]
+  },
+  "white_pizza": {
+    "name": "White Pizza",
+    "prep_time": "16 minutes",
+    "cook_time": "12 minutes",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "1/2 cup pizza dough",
+      "1/2 cup tomato sauce",
+      "150g cheese, grated",
+      "1/2 tsp salt",
+      "2 tbsp butter",
+      "2 cups flour"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes"
+      }
+    ]
+  },
+  "vegetarian_tacos": {
+    "name": "Vegetarian Tacos",
+    "prep_time": "18 minutes",
+    "cook_time": "26 minutes",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "1/2 cup tortillas",
+      "2 cups meat",
+      "1 onion, diced",
+      "2 cups cilantro",
+      "300g rice",
+      "1 cup milk",
+      "200g spinach"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes"
+      }
+    ]
+  },
+  "chicken_stir_fry": {
+    "name": "Chicken Stir Fry",
+    "prep_time": "19 minutes",
+    "cook_time": "19 minutes",
+    "servings": 3,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1 cup vegetables",
+      "1/2 cup soy sauce",
+      "2 tbsp oil",
+      "2 cloves garlic, minced",
+      "2 cups mushroom",
+      "200g parmesan",
+      "1/2 cup ground beef",
+      "1 cup bacon"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes",
+        "tips": "Make sure to taste as you go"
+      }
+    ]
+  },
+  "greek_salad": {
+    "name": "Greek Salad",
     "prep_time": "10 minutes",
     "cook_time": "0 minutes",
     "servings": 4,
     "difficulty": "Easy",
     "ingredients": [
-      "3 ripe avocados",
-      "1 lime, juiced",
+      "1 cup lettuce",
+      "3 tbsp olive oil",
       "1/2 tsp salt",
-      "1/2 cup diced onion",
-      "2 tomatoes, diced",
-      "1 tbsp chopped cilantro",
-      "1 clove garlic, minced",
-      "1 pinch cayenne pepper"
-    ],
-    "steps": [
-      {
-        "step": 1,
-        "instruction": "Cut avocados, remove pit, scoop into a bowl.",
-        "duration": "2 minutes"
-      },
-      {
-        "step": 2,
-        "instruction": "Mash avocados with a fork, leaving some chunks.",
-        "duration": "2 minutes"
-      },
-      {
-        "step": 3,
-        "instruction": "Add lime juice, salt, onion, tomatoes, cilantro, garlic, and cayenne. Mix gently.",
-        "duration": "3 minutes",
-        "tips": "Taste and adjust seasoning as needed."
-      }
-    ]
-  },
-  "french_toast": {
-    "name": "Classic French Toast",
-    "prep_time": "5 minutes",
-    "cook_time": "10 minutes",
-    "servings": 2,
-    "difficulty": "Easy",
-    "ingredients": [
-      "4 slices of bread",
-      "2 eggs",
+      "1 tsp pepper",
+      "1 cup thyme",
       "1/2 cup milk",
-      "1 tsp vanilla extract",
-      "1/2 tsp cinnamon",
-      "Butter for frying",
-      "Maple syrup for serving"
+      "2 cups parmesan",
+      "1/2 cup rosemary",
+      "1 cup basil"
     ],
     "steps": [
       {
         "step": 1,
-        "instruction": "Whisk eggs, milk, vanilla, and cinnamon in a bowl.",
-        "duration": "2 minutes"
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Adjust seasoning to your preference"
       },
       {
         "step": 2,
-        "instruction": "Dip each slice of bread into the egg mixture, coating both sides.",
-        "duration": "2 minutes"
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
       },
       {
         "step": 3,
-        "instruction": "Heat butter in a pan and cook bread slices until golden brown on both sides.",
-        "duration": "5 minutes"
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
       },
       {
         "step": 4,
-        "instruction": "Serve hot with maple syrup.",
-        "duration": "1 minute"
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      }
+    ]
+  },
+  "bacon_burger": {
+    "name": "Bacon Burger",
+    "prep_time": "11 minutes",
+    "cook_time": "13 minutes",
+    "servings": 6,
+    "difficulty": "Easy",
+    "ingredients": [
+      "1/2 cup ground meat",
+      "1 cup bun",
+      "1 tsp salt",
+      "to taste pepper",
+      "2 cups bacon",
+      "400g rice",
+      "200g spinach",
+      "200g tortillas",
+      "200g eggs"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Adjust seasoning to your preference"
+      }
+    ]
+  },
+  "cookies_dessert": {
+    "name": "Cookies Dessert",
+    "prep_time": "20 minutes",
+    "cook_time": "31 minutes",
+    "servings": 10,
+    "difficulty": "Medium",
+    "ingredients": [
+      "200g sugar",
+      "200g flour",
+      "1/2 cup eggs",
+      "2 tbsp butter",
+      "200g zucchini",
+      "200g broccoli",
+      "200g basil",
+      "200g rice",
+      "2 cups cumin"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Don't overcook - check frequently"
+      }
+    ]
+  },
+  "fajitas_chicken": {
+    "name": "Fajitas Chicken",
+    "prep_time": "13 minutes",
+    "cook_time": "27 minutes",
+    "servings": 3,
+    "difficulty": "Hard",
+    "ingredients": [
+      "400g chicken breast",
+      "1/2 tsp salt",
+      "1/2 tsp pepper",
+      "2 tbsp oil",
+      "150g cheese, grated"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Adjust seasoning to your preference"
+      }
+    ]
+  },
+  "adobo_chicken": {
+    "name": "Adobo Chicken",
+    "prep_time": "19 minutes",
+    "cook_time": "24 minutes",
+    "servings": 4,
+    "difficulty": "Hard",
+    "ingredients": [
+      "500g chicken breast",
+      "1/2 tsp salt",
+      "1/2 tsp pepper",
+      "3 tbsp oil",
+      "200g milk",
+      "2 tbsp sesame oil",
+      "2 cups celery"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Don't overcook - check frequently"
+      }
+    ]
+  },
+  "chicken_burger": {
+    "name": "Chicken Burger",
+    "prep_time": "20 minutes",
+    "cook_time": "16 minutes",
+    "servings": 5,
+    "difficulty": "Easy",
+    "ingredients": [
+      "200g ground meat",
+      "2 cups bun",
+      "to taste salt",
+      "1 tsp pepper",
+      "3 tbsp vegetable oil",
+      "200g fish",
+      "1/2 tsp bell pepper",
+      "2 cups spinach"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes",
+        "tips": "Make sure to taste as you go"
+      }
+    ]
+  },
+  "supreme_pizza": {
+    "name": "Supreme Pizza",
+    "prep_time": "25 minutes",
+    "cook_time": "18 minutes",
+    "servings": 2,
+    "difficulty": "Hard",
+    "ingredients": [
+      "200g pizza dough",
+      "2 cups tomato sauce",
+      "150g cheese, grated",
+      "1/2 tsp salt",
+      "1 cup ground beef",
+      "1/4 cup butter",
+      "1/2 cup zucchini",
+      "1 cup water"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 8,
+        "instruction": "Continue cooking process for pizza.",
+        "duration": "6 minutes"
+      }
+    ]
+  },
+  "classic_burger": {
+    "name": "Classic Burger",
+    "prep_time": "12 minutes",
+    "cook_time": "10 minutes",
+    "servings": 5,
+    "difficulty": "Medium",
+    "ingredients": [
+      "2 cups ground meat",
+      "1 cup bun",
+      "1 tsp salt",
+      "1/2 tsp pepper",
+      "2 cups flour",
+      "1 cup celery",
+      "1/2 cup zucchini",
+      "200g mushroom"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes"
+      },
+      {
+        "step": 8,
+        "instruction": "Continue cooking process for burger.",
+        "duration": "5 minutes"
+      }
+    ]
+  },
+  "chocolate_cake_dessert": {
+    "name": "Chocolate Cake Dessert",
+    "prep_time": "24 minutes",
+    "cook_time": "46 minutes",
+    "servings": 12,
+    "difficulty": "Hard",
+    "ingredients": [
+      "1/2 cup sugar",
+      "1/2 cup flour",
+      "1 cup eggs",
+      "1/4 cup butter",
+      "2 cups oregano",
+      "1/2 cup milk",
+      "2 cups bread",
+      "200g water",
+      "1/2 cup basil",
+      "2 cups carrot"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      }
+    ]
+  },
+  "hawaiian_pizza": {
+    "name": "Hawaiian Pizza",
+    "prep_time": "24 minutes",
+    "cook_time": "14 minutes",
+    "servings": 2,
+    "difficulty": "Medium",
+    "ingredients": [
+      "1 cup pizza dough",
+      "1 cup tomato sauce",
+      "150g cheese, grated",
+      "1/2 tsp salt",
+      "200g parmesan",
+      "200g tomato"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes"
+      }
+    ]
+  },
+  "broccoli_cheddar_soup": {
+    "name": "Broccoli Cheddar Soup",
+    "prep_time": "14 minutes",
+    "cook_time": "46 minutes",
+    "servings": 8,
+    "difficulty": "Medium",
+    "ingredients": [
+      "1/2 cup broth",
+      "to taste salt",
+      "1/2 tsp pepper",
+      "2 onion, diced",
+      "1/2 cup bacon",
+      "1/4 cup olive oil"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      }
+    ]
+  },
+  "vegetable_stir_fry": {
+    "name": "Vegetable Stir Fry",
+    "prep_time": "17 minutes",
+    "cook_time": "11 minutes",
+    "servings": 4,
+    "difficulty": "Medium",
+    "ingredients": [
+      "1/2 cup vegetables",
+      "2 cups soy sauce",
+      "1/4 cup oil",
+      "4 cloves garlic, minced",
+      "1 cup vinegar",
+      "1 onion, diced",
+      "1/2 cup tomato",
+      "1/2 cup cumin",
+      "1 cup celery"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes",
+        "tips": "Adjust seasoning to your preference"
+      }
+    ]
+  },
+  "teriyaki_chicken": {
+    "name": "Teriyaki Chicken",
+    "prep_time": "19 minutes",
+    "cook_time": "20 minutes",
+    "servings": 6,
+    "difficulty": "Medium",
+    "ingredients": [
+      "200g chicken breast",
+      "to taste salt",
+      "1/2 tsp pepper",
+      "1/4 cup oil",
+      "1/2 cup tortillas",
+      "200g mushroom",
+      "2 cups wine",
+      "2 cups milk"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Use fresh ingredients for best results"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      }
+    ]
+  },
+  "miso_soup": {
+    "name": "Miso Soup",
+    "prep_time": "16 minutes",
+    "cook_time": "23 minutes",
+    "servings": 6,
+    "difficulty": "Easy",
+    "ingredients": [
+      "2 cups broth",
+      "1 tsp salt",
+      "1 tsp pepper",
+      "2 onion, diced",
+      "1/2 cup flour",
+      "1 cup mushroom"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes"
+      }
+    ]
+  },
+  "mushroom_swiss_burger": {
+    "name": "Mushroom Swiss Burger",
+    "prep_time": "15 minutes",
+    "cook_time": "15 minutes",
+    "servings": 6,
+    "difficulty": "Easy",
+    "ingredients": [
+      "200g ground meat",
+      "2 cups bun",
+      "to taste salt",
+      "1 tsp pepper",
+      "1 cup tortillas",
+      "1/2 cup eggs",
+      "200g chicken breast",
+      "1/2 cup wine"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes"
+      },
+      {
+        "step": 7,
+        "instruction": "Plate and serve hot",
+        "duration": "1 minutes"
+      },
+      {
+        "step": 8,
+        "instruction": "Continue cooking process for burger.",
+        "duration": "8 minutes"
+      }
+    ]
+  },
+  "quattro_formaggi_pizza_2": {
+    "name": "Quattro Formaggi Pizza 2",
+    "prep_time": "23 minutes",
+    "cook_time": "20 minutes",
+    "servings": 4,
+    "difficulty": "Hard",
+    "ingredients": [
+      "1/2 cup pizza dough",
+      "1/2 cup tomato sauce",
+      "100g cheese, grated",
+      "to taste salt",
+      "2 cups pork"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Adjust seasoning to your preference"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes",
+        "tips": "Make sure to taste as you go"
+      }
+    ]
+  },
+  "ice_cream_dessert_2": {
+    "name": "Ice Cream Dessert 2",
+    "prep_time": "29 minutes",
+    "cook_time": "58 minutes",
+    "servings": 9,
+    "difficulty": "Medium",
+    "ingredients": [
+      "200g sugar",
+      "1/2 cup flour",
+      "1 cup eggs",
+      "2 tbsp butter",
+      "1 cup zucchini",
+      "3 tbsp olive oil",
+      "2 tbsp vegetable oil"
+    ],
+    "steps": [
+      {
+        "step": 1,
+        "instruction": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+        "duration": "5 minutes",
+        "tips": "Make sure to taste as you go"
+      },
+      {
+        "step": 2,
+        "instruction": "Heat a large pan/skillet over medium-high heat",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 3,
+        "instruction": "Cook the main protein until golden and cooked through",
+        "duration": "8 minutes"
+      },
+      {
+        "step": 4,
+        "instruction": "Add vegetables and cook until tender",
+        "duration": "5 minutes",
+        "tips": "Don't overcook - check frequently"
+      },
+      {
+        "step": 5,
+        "instruction": "Season with salt, pepper, and other spices",
+        "duration": "2 minutes"
+      },
+      {
+        "step": 6,
+        "instruction": "Reduce heat and let simmer until flavors combine",
+        "duration": "10 minutes",
+        "tips": "Use fresh ingredients for best results"
       }
     ]
   }

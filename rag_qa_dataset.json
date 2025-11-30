@@ -1,0 +1,1048 @@
+{
+  "metadata": {
+    "dataset_name": "CookMate RAG Evaluation Dataset",
+    "total_questions": 100,
+    "document_source": "recipes.json",
+    "generated_at": "2025-11-30T13:01:13.094205",
+    "question_types": {
+      "recipe_overview": 20,
+      "ingredients": 25,
+      "steps": 30,
+      "multi_recipe": 10,
+      "timing": 10,
+      "cooking_technique": 5
+    }
+  },
+  "qa_pairs": [
+    {
+      "id": 1,
+      "question": "What is the name of the recipe that takes 14 minutes to prepare and 32 minutes to cook?",
+      "answer": "Paella Rice",
+      "document": "recipes.json",
+      "pages": "Page 1 (Recipe Overview Section)",
+      "recipe_id": "paella_rice",
+      "recipe_name": "Paella Rice",
+      "question_type": "recipe_overview"
+    },
+    {
+      "id": 2,
+      "question": "How long does it take to prepare Minestrone Soup?",
+      "answer": "19 minutes",
+      "document": "recipes.json",
+      "pages": "Page 2 (Recipe Overview Section)",
+      "recipe_id": "minestrone_soup",
+      "recipe_name": "Minestrone Soup",
+      "question_type": "recipe_overview"
+    },
+    {
+      "id": 3,
+      "question": "How many servings does Asian Salad make?",
+      "answer": "2 servings",
+      "document": "recipes.json",
+      "pages": "Page 3 (Recipe Overview Section)",
+      "recipe_id": "asian_salad",
+      "recipe_name": "Asian Salad",
+      "question_type": "recipe_overview"
+    },
+    {
+      "id": 4,
+      "question": "What is the difficulty level of Margherita Pizza?",
+      "answer": "Medium",
+      "document": "recipes.json",
+      "pages": "Page 4 (Recipe Overview Section)",
+      "recipe_id": "margherita_pizza",
+      "recipe_name": "Margherita Pizza",
+      "question_type": "recipe_overview"
+    },
+    {
+      "id": 5,
+      "question": "What is the name of the recipe that takes 14 minutes to prepare and 11 minutes to cook?",
+      "answer": "Pesto Pasta",
+      "document": "recipes.json",
+      "pages": "Page 5 (Recipe Overview Section)",
+      "recipe_id": "pesto_pasta",
+      "recipe_name": "Pesto Pasta",
+      "question_type": "recipe_overview"
+    },
+    {
+      "id": 6,
+      "question": "How long does it take to prepare Biryani Rice?",
+      "answer": "12 minutes",
+      "document": "recipes.json",
+      "pages": "Page 6 (Recipe Overview Section)",
+      "recipe_id": "biryani_rice",
+      "recipe_name": "Biryani Rice",
+      "question_type": "recipe_overview"
+    },
+    {
+      "id": 7,
+      "question": "How many servings does Cheesecake Dessert make?",
+      "answer": "4 servings",
+      "document": "recipes.json",
+      "pages": "Page 7 (Recipe Overview Section)",
+      "recipe_id": "cheesecake_dessert",
+      "recipe_name": "Cheesecake Dessert",
+      "question_type": "recipe_overview"
+    },
+    {
+      "id": 8,
+      "question": "What is the difficulty level of Carnitas Tacos?",
+      "answer": "Easy",
+      "document": "recipes.json",
+      "pages": "Page 8 (Recipe Overview Section)",
+      "recipe_id": "carnitas_tacos",
+      "recipe_name": "Carnitas Tacos",
+      "question_type": "recipe_overview"
+    },
+    {
+      "id": 9,
+      "question": "What is the name of the recipe that takes 14 minutes to prepare and 0 minutes to cook?",
+      "answer": "Caprese Salad",
+      "document": "recipes.json",
+      "pages": "Page 9 (Recipe Overview Section)",
+      "recipe_id": "caprese_salad",
+      "recipe_name": "Caprese Salad",
+      "question_type": "recipe_overview"
+    },
+    {
+      "id": 10,
+      "question": "How long does it take to prepare Pilaf Rice?",
+      "answer": "10 minutes",
+      "document": "recipes.json",
+      "pages": "Page 10 (Recipe Overview Section)",
+      "recipe_id": "pilaf_rice",
+      "recipe_name": "Pilaf Rice",
+      "question_type": "recipe_overview"
+    },
+    {
+      "id": 11,
+      "question": "How many servings does Cheeseburger Burger make?",
+      "answer": "6 servings",
+      "document": "recipes.json",
+      "pages": "Page 11 (Recipe Overview Section)",
+      "recipe_id": "cheeseburger_burger",
+      "recipe_name": "Cheeseburger Burger",
+      "question_type": "recipe_overview"
+    },
+    {
+      "id": 12,
+      "question": "What is the difficulty level of Stir Fry Chicken?",
+      "answer": "Medium",
+      "document": "recipes.json",
+      "pages": "Page 12 (Recipe Overview Section)",
+      "recipe_id": "stir_fry_chicken",
+      "recipe_name": "Stir Fry Chicken",
+      "question_type": "recipe_overview"
+    },
+    {
+      "id": 13,
+      "question": "What is the name of the recipe that takes 9 minutes to prepare and 12 minutes to cook?",
+      "answer": "Primavera Pasta",
+      "document": "recipes.json",
+      "pages": "Page 13 (Recipe Overview Section)",
+      "recipe_id": "primavera_pasta",
+      "recipe_name": "Primavera Pasta",
+      "question_type": "recipe_overview"
+    },
+    {
+      "id": 14,
+      "question": "How long does it take to prepare Ice Cream Dessert 2?",
+      "answer": "29 minutes",
+      "document": "recipes.json",
+      "pages": "Page 14 (Recipe Overview Section)",
+      "recipe_id": "ice_cream_dessert_2",
+      "recipe_name": "Ice Cream Dessert 2",
+      "question_type": "recipe_overview"
+    },
+    {
+      "id": 15,
+      "question": "How many servings does Tofu Stir Fry make?",
+      "answer": "4 servings",
+      "document": "recipes.json",
+      "pages": "Page 15 (Recipe Overview Section)",
+      "recipe_id": "tofu_stir_fry",
+      "recipe_name": "Tofu Stir Fry",
+      "question_type": "recipe_overview"
+    },
+    {
+      "id": 16,
+      "question": "What is the difficulty level of Quattro Formaggi Pizza 2?",
+      "answer": "Hard",
+      "document": "recipes.json",
+      "pages": "Page 16 (Recipe Overview Section)",
+      "recipe_id": "quattro_formaggi_pizza_2",
+      "recipe_name": "Quattro Formaggi Pizza 2",
+      "question_type": "recipe_overview"
+    },
+    {
+      "id": 17,
+      "question": "What is the name of the recipe that takes 12 minutes to prepare and 3 minutes to cook?",
+      "answer": "Caesar Salad",
+      "document": "recipes.json",
+      "pages": "Page 17 (Recipe Overview Section)",
+      "recipe_id": "caesar_salad",
+      "recipe_name": "Caesar Salad",
+      "question_type": "recipe_overview"
+    },
+    {
+      "id": 18,
+      "question": "How long does it take to prepare Marsala Chicken?",
+      "answer": "20 minutes",
+      "document": "recipes.json",
+      "pages": "Page 18 (Recipe Overview Section)",
+      "recipe_id": "marsala_chicken",
+      "recipe_name": "Marsala Chicken",
+      "question_type": "recipe_overview"
+    },
+    {
+      "id": 19,
+      "question": "How many servings does Veggie Burger make?",
+      "answer": "4 servings",
+      "document": "recipes.json",
+      "pages": "Page 19 (Recipe Overview Section)",
+      "recipe_id": "veggie_burger",
+      "recipe_name": "Veggie Burger",
+      "question_type": "recipe_overview"
+    },
+    {
+      "id": 20,
+      "question": "What is the difficulty level of Vegetable Soup?",
+      "answer": "Easy",
+      "document": "recipes.json",
+      "pages": "Page 20 (Recipe Overview Section)",
+      "recipe_id": "vegetable_soup",
+      "recipe_name": "Vegetable Soup",
+      "question_type": "recipe_overview"
+    },
+    {
+      "id": 21,
+      "question": "What ingredients are needed for Bacon Burger?",
+      "answer": "1/2 cup ground meat, 1 cup bun, 1 tsp salt, to taste pepper, 2 cups bacon, 400g rice, 200g spinach, 200g tortillas, 200g eggs",
+      "document": "recipes.json",
+      "pages": "Page 21 (Ingredients Section)",
+      "recipe_id": "bacon_burger",
+      "recipe_name": "Bacon Burger",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 22,
+      "question": "Is 2 tbsp olive oil used in Sushi Rice?",
+      "answer": "Yes, 2 tbsp olive oil is used in Sushi Rice",
+      "document": "recipes.json",
+      "pages": "Page 22 (Ingredients Section)",
+      "recipe_id": "sushi_rice",
+      "recipe_name": "Sushi Rice",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 23,
+      "question": "How much 200g oregano is needed for Waldorf Salad?",
+      "answer": "200g oregano",
+      "document": "recipes.json",
+      "pages": "Page 23 (Ingredients Section)",
+      "recipe_id": "waldorf_salad",
+      "recipe_name": "Waldorf Salad",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 24,
+      "question": "How many ingredients are required for Vegetable Stir Fry?",
+      "answer": "9 ingredients",
+      "document": "recipes.json",
+      "pages": "Page 24 (Ingredients Section)",
+      "recipe_id": "vegetable_stir_fry",
+      "recipe_name": "Vegetable Stir Fry",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 25,
+      "question": "List all ingredients for Broccoli Cheddar Soup, including 1/2 cup broth",
+      "answer": "1/2 cup broth, to taste salt, 1/2 tsp pepper, 2 onion, diced, 1/2 cup bacon, 1/4 cup olive oil",
+      "document": "recipes.json",
+      "pages": "Page 25 (Ingredients Section)",
+      "recipe_id": "broccoli_cheddar_soup",
+      "recipe_name": "Broccoli Cheddar Soup",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 26,
+      "question": "What ingredients are needed for Fish Tacos?",
+      "answer": "1 cup tortillas, 1 cup meat, 2 onion, diced, 2 cups cilantro, 2 cups water, 1/2 cup bread",
+      "document": "recipes.json",
+      "pages": "Page 26 (Ingredients Section)",
+      "recipe_id": "fish_tacos",
+      "recipe_name": "Fish Tacos",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 27,
+      "question": "Is 1 cup tortillas used in Mushroom Swiss Burger?",
+      "answer": "Yes, 1 cup tortillas is used in Mushroom Swiss Burger",
+      "document": "recipes.json",
+      "pages": "Page 27 (Ingredients Section)",
+      "recipe_id": "mushroom_swiss_burger",
+      "recipe_name": "Mushroom Swiss Burger",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 28,
+      "question": "How much 2 cloves garlic is needed for Szechuan Stir Fry?",
+      "answer": "2 cloves garlic, minced",
+      "document": "recipes.json",
+      "pages": "Page 28 (Ingredients Section)",
+      "recipe_id": "szechuan_stir_fry",
+      "recipe_name": "Szechuan Stir Fry",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 29,
+      "question": "How many ingredients are required for Chicken Tacos?",
+      "answer": "7 ingredients",
+      "document": "recipes.json",
+      "pages": "Page 29 (Ingredients Section)",
+      "recipe_id": "chicken_tacos",
+      "recipe_name": "Chicken Tacos",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 30,
+      "question": "List all ingredients for Fried Rice, including to taste salt",
+      "answer": "300g rice, 200g water, to taste salt, 3 tbsp butter, 1 cup vinegar",
+      "document": "recipes.json",
+      "pages": "Page 30 (Ingredients Section)",
+      "recipe_id": "fried_rice",
+      "recipe_name": "Fried Rice",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 31,
+      "question": "What ingredients are needed for Pho Soup?",
+      "answer": "1 cup broth, to taste salt, 1 tsp pepper, 2 onion, diced, 1 cup milk, 1/2 cup mozzarella",
+      "document": "recipes.json",
+      "pages": "Page 31 (Ingredients Section)",
+      "recipe_id": "pho_soup",
+      "recipe_name": "Pho Soup",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 32,
+      "question": "Is 1 cup spinach used in Ice Cream Dessert?",
+      "answer": "Yes, 1 cup spinach is used in Ice Cream Dessert",
+      "document": "recipes.json",
+      "pages": "Page 32 (Ingredients Section)",
+      "recipe_id": "ice_cream_dessert",
+      "recipe_name": "Ice Cream Dessert",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 33,
+      "question": "How much 200g pizza dough is needed for Quattro Formaggi Pizza?",
+      "answer": "200g pizza dough",
+      "document": "recipes.json",
+      "pages": "Page 33 (Ingredients Section)",
+      "recipe_id": "quattro_formaggi_pizza",
+      "recipe_name": "Quattro Formaggi Pizza",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 34,
+      "question": "How many ingredients are required for Salmon Burger?",
+      "answer": "7 ingredients",
+      "document": "recipes.json",
+      "pages": "Page 34 (Ingredients Section)",
+      "recipe_id": "salmon_burger",
+      "recipe_name": "Salmon Burger",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 35,
+      "question": "List all ingredients for Bolognese Pasta, including 200g oregano",
+      "answer": "300g pasta, 2 tbsp olive oil, 2 cloves garlic, minced, to taste salt, 1 tsp pepper, 1/4 cup vegetable oil, 1 cup cream, 200g oregano",
+      "document": "recipes.json",
+      "pages": "Page 35 (Ingredients Section)",
+      "recipe_id": "bolognese_pasta",
+      "recipe_name": "Bolognese Pasta",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 36,
+      "question": "What ingredients are needed for Carne Asada Tacos?",
+      "answer": "2 cups tortillas, 200g meat, 1 onion, diced, 200g cilantro, 200g paprika",
+      "document": "recipes.json",
+      "pages": "Page 36 (Ingredients Section)",
+      "recipe_id": "carne_asada_tacos",
+      "recipe_name": "Carne Asada Tacos",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 37,
+      "question": "Is 2 cups milk used in Teriyaki Chicken?",
+      "answer": "Yes, 2 cups milk is used in Teriyaki Chicken",
+      "document": "recipes.json",
+      "pages": "Page 37 (Ingredients Section)",
+      "recipe_id": "teriyaki_chicken",
+      "recipe_name": "Teriyaki Chicken",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 38,
+      "question": "How much 1 cup bacon is needed for Carbonara Pasta?",
+      "answer": "1 cup bacon",
+      "document": "recipes.json",
+      "pages": "Page 38 (Ingredients Section)",
+      "recipe_id": "carbonara_pasta",
+      "recipe_name": "Carbonara Pasta",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 39,
+      "question": "How many ingredients are required for Cobb Salad?",
+      "answer": "9 ingredients",
+      "document": "recipes.json",
+      "pages": "Page 39 (Ingredients Section)",
+      "recipe_id": "cobb_salad",
+      "recipe_name": "Cobb Salad",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 40,
+      "question": "List all ingredients for Miso Soup, including 1 tsp pepper",
+      "answer": "2 cups broth, 1 tsp salt, 1 tsp pepper, 2 onion, diced, 1/2 cup flour, 1 cup mushroom",
+      "document": "recipes.json",
+      "pages": "Page 40 (Ingredients Section)",
+      "recipe_id": "miso_soup",
+      "recipe_name": "Miso Soup",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 41,
+      "question": "What ingredients are needed for Parmesan Chicken?",
+      "answer": "200g chicken breast, to taste salt, 1/2 tsp pepper, 2 tbsp oil, 1 cup spinach, 1/2 cup zucchini",
+      "document": "recipes.json",
+      "pages": "Page 41 (Ingredients Section)",
+      "recipe_id": "parmesan_chicken",
+      "recipe_name": "Parmesan Chicken",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 42,
+      "question": "Is 200g cheese used in BBQ Chicken Pizza?",
+      "answer": "Yes, 200g cheese, grated is used in BBQ Chicken Pizza",
+      "document": "recipes.json",
+      "pages": "Page 42 (Ingredients Section)",
+      "recipe_id": "bbq_chicken_pizza",
+      "recipe_name": "BBQ Chicken Pizza",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 43,
+      "question": "How much 1 cup eggs is needed for Mousse Dessert?",
+      "answer": "1 cup eggs",
+      "document": "recipes.json",
+      "pages": "Page 43 (Ingredients Section)",
+      "recipe_id": "mousse_dessert",
+      "recipe_name": "Mousse Dessert",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 44,
+      "question": "How many ingredients are required for French Onion Soup?",
+      "answer": "5 ingredients",
+      "document": "recipes.json",
+      "pages": "Page 44 (Ingredients Section)",
+      "recipe_id": "french_onion_soup",
+      "recipe_name": "French Onion Soup",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 45,
+      "question": "List all ingredients for Tiramisu Dessert, including 200g milk",
+      "answer": "2 cups sugar, 2 cups flour, 2 cups eggs, 2 tbsp butter, 1/2 cup soy sauce, 200g shrimp, 400g pasta, 200g milk",
+      "document": "recipes.json",
+      "pages": "Page 45 (Ingredients Section)",
+      "recipe_id": "tiramisu_dessert",
+      "recipe_name": "Tiramisu Dessert",
+      "question_type": "ingredients"
+    },
+    {
+      "id": 46,
+      "question": "What is step 6 in Pepperoni Pizza?",
+      "answer": "Reduce heat and let simmer until flavors combine",
+      "document": "recipes.json",
+      "pages": "Page 46 (Step 6 Section)",
+      "recipe_id": "pepperoni_pizza",
+      "recipe_name": "Pepperoni Pizza",
+      "question_type": "steps",
+      "step_number": 6
+    },
+    {
+      "id": 47,
+      "question": "How long does step 5 take in Vegetarian Pizza?",
+      "answer": "2 minutes",
+      "document": "recipes.json",
+      "pages": "Page 47 (Step 5 Section)",
+      "recipe_id": "vegetarian_pizza",
+      "recipe_name": "Vegetarian Pizza",
+      "question_type": "steps",
+      "step_number": 5
+    },
+    {
+      "id": 48,
+      "question": "What is the instruction for step 3 of Brownies Dessert?",
+      "answer": "Cook the main protein until golden and cooked through",
+      "document": "recipes.json",
+      "pages": "Page 48 (Step 3 Section)",
+      "recipe_id": "brownies_dessert",
+      "recipe_name": "Brownies Dessert",
+      "question_type": "steps",
+      "step_number": 3
+    },
+    {
+      "id": 49,
+      "question": "Describe step 4 of Kung Pao Stir Fry",
+      "answer": "Add vegetables and cook until tender (Takes 5 minutes)",
+      "document": "recipes.json",
+      "pages": "Page 49 (Step 4 Section)",
+      "recipe_id": "kung_pao_stir_fry",
+      "recipe_name": "Kung Pao Stir Fry",
+      "question_type": "steps",
+      "step_number": 4
+    },
+    {
+      "id": 50,
+      "question": "How many steps are in Cookies Dessert?",
+      "answer": "6 steps",
+      "document": "recipes.json",
+      "pages": "Page 50 (Steps Section)",
+      "recipe_id": "cookies_dessert",
+      "recipe_name": "Cookies Dessert",
+      "question_type": "steps",
+      "step_number": 6
+    },
+    {
+      "id": 51,
+      "question": "Describe step 3 of White Pizza",
+      "answer": "Cook the main protein until golden and cooked through (Takes 8 minutes)",
+      "document": "recipes.json",
+      "pages": "Page 51 (Step 3 Section)",
+      "recipe_id": "white_pizza",
+      "recipe_name": "White Pizza",
+      "question_type": "steps",
+      "step_number": 3
+    },
+    {
+      "id": 52,
+      "question": "What is step 4 in Risotto Rice?",
+      "answer": "Add vegetables and cook until tender",
+      "document": "recipes.json",
+      "pages": "Page 52 (Step 4 Section)",
+      "recipe_id": "risotto_rice",
+      "recipe_name": "Risotto Rice",
+      "question_type": "steps",
+      "step_number": 4
+    },
+    {
+      "id": 53,
+      "question": "How long does step 4 take in Jambalaya Rice?",
+      "answer": "5 minutes",
+      "document": "recipes.json",
+      "pages": "Page 53 (Step 4 Section)",
+      "recipe_id": "jambalaya_rice",
+      "recipe_name": "Jambalaya Rice",
+      "question_type": "steps",
+      "step_number": 4
+    },
+    {
+      "id": 54,
+      "question": "What is the instruction for step 4 of Coconut Rice?",
+      "answer": "Add vegetables and cook until tender",
+      "document": "recipes.json",
+      "pages": "Page 54 (Step 4 Section)",
+      "recipe_id": "coconut_rice",
+      "recipe_name": "Coconut Rice",
+      "question_type": "steps",
+      "step_number": 4
+    },
+    {
+      "id": 55,
+      "question": "What tip is provided for step 2 in Adobo Chicken?",
+      "answer": "Use fresh ingredients for best results",
+      "document": "recipes.json",
+      "pages": "Page 55 (Step 2 Tips Section)",
+      "recipe_id": "adobo_chicken",
+      "recipe_name": "Adobo Chicken",
+      "question_type": "steps",
+      "step_number": 2
+    },
+    {
+      "id": 56,
+      "question": "How many steps are in Classic Burger?",
+      "answer": "8 steps",
+      "document": "recipes.json",
+      "pages": "Page 56 (Steps Section)",
+      "recipe_id": "classic_burger",
+      "recipe_name": "Classic Burger",
+      "question_type": "steps",
+      "step_number": 2
+    },
+    {
+      "id": 57,
+      "question": "Describe step 1 of Quinoa Salad",
+      "answer": "Prepare all ingredients. Chop and prepare all ingredients as needed (Takes 5 minutes)",
+      "document": "recipes.json",
+      "pages": "Page 57 (Step 1 Section)",
+      "recipe_id": "quinoa_salad",
+      "recipe_name": "Quinoa Salad",
+      "question_type": "steps",
+      "step_number": 1
+    },
+    {
+      "id": 58,
+      "question": "What is step 1 in Barbacoa Tacos?",
+      "answer": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+      "document": "recipes.json",
+      "pages": "Page 58 (Step 1 Section)",
+      "recipe_id": "barbacoa_tacos",
+      "recipe_name": "Barbacoa Tacos",
+      "question_type": "steps",
+      "step_number": 1
+    },
+    {
+      "id": 59,
+      "question": "How long does step 4 take in Lentil Soup?",
+      "answer": "5 minutes",
+      "document": "recipes.json",
+      "pages": "Page 59 (Step 4 Section)",
+      "recipe_id": "lentil_soup",
+      "recipe_name": "Lentil Soup",
+      "question_type": "steps",
+      "step_number": 4
+    },
+    {
+      "id": 60,
+      "question": "What is the instruction for step 1 of Garden Salad?",
+      "answer": "Prepare all ingredients. Chop and prepare all ingredients as needed",
+      "document": "recipes.json",
+      "pages": "Page 60 (Step 1 Section)",
+      "recipe_id": "garden_salad",
+      "recipe_name": "Garden Salad",
+      "question_type": "steps",
+      "step_number": 1
+    },
+    {
+      "id": 61,
+      "question": "What tip is provided for step 7 in Neapolitan Pizza?",
+      "answer": "Don't overcook - check frequently",
+      "document": "recipes.json",
+      "pages": "Page 61 (Step 7 Tips Section)",
+      "recipe_id": "neapolitan_pizza",
+      "recipe_name": "Neapolitan Pizza",
+      "question_type": "steps",
+      "step_number": 7
+    },
+    {
+      "id": 62,
+      "question": "How many steps are in Chicken Stir Fry?",
+      "answer": "7 steps",
+      "document": "recipes.json",
+      "pages": "Page 62 (Steps Section)",
+      "recipe_id": "chicken_stir_fry",
+      "recipe_name": "Chicken Stir Fry",
+      "question_type": "steps",
+      "step_number": 5
+    },
+    {
+      "id": 63,
+      "question": "Describe step 4 of Beef Tacos",
+      "answer": "Add vegetables and cook until tender (Takes 5 minutes)",
+      "document": "recipes.json",
+      "pages": "Page 63 (Step 4 Section)",
+      "recipe_id": "beef_tacos",
+      "recipe_name": "Beef Tacos",
+      "question_type": "steps",
+      "step_number": 4
+    },
+    {
+      "id": 64,
+      "question": "What is step 3 in Curry Chicken?",
+      "answer": "Cook the main protein until golden and cooked through",
+      "document": "recipes.json",
+      "pages": "Page 64 (Step 3 Section)",
+      "recipe_id": "curry_chicken",
+      "recipe_name": "Curry Chicken",
+      "question_type": "steps",
+      "step_number": 3
+    },
+    {
+      "id": 65,
+      "question": "How long does step 1 take in Shrimp Tacos?",
+      "answer": "5 minutes",
+      "document": "recipes.json",
+      "pages": "Page 65 (Step 1 Section)",
+      "recipe_id": "shrimp_tacos",
+      "recipe_name": "Shrimp Tacos",
+      "question_type": "steps",
+      "step_number": 1
+    },
+    {
+      "id": 66,
+      "question": "What is the instruction for step 3 of Kale Salad?",
+      "answer": "Cook the main protein until golden and cooked through",
+      "document": "recipes.json",
+      "pages": "Page 66 (Step 3 Section)",
+      "recipe_id": "kale_salad",
+      "recipe_name": "Kale Salad",
+      "question_type": "steps",
+      "step_number": 3
+    },
+    {
+      "id": 67,
+      "question": "What tip is provided for step 1 in Supreme Pizza?",
+      "answer": "Make sure to taste as you go",
+      "document": "recipes.json",
+      "pages": "Page 67 (Step 1 Tips Section)",
+      "recipe_id": "supreme_pizza",
+      "recipe_name": "Supreme Pizza",
+      "question_type": "steps",
+      "step_number": 1
+    },
+    {
+      "id": 68,
+      "question": "How many steps are in Mushroom Soup?",
+      "answer": "6 steps",
+      "document": "recipes.json",
+      "pages": "Page 68 (Steps Section)",
+      "recipe_id": "mushroom_soup",
+      "recipe_name": "Mushroom Soup",
+      "question_type": "steps",
+      "step_number": 2
+    },
+    {
+      "id": 69,
+      "question": "Describe step 2 of Tikka Masala Chicken",
+      "answer": "Heat a large pan/skillet over medium-high heat (Takes 2 minutes)",
+      "document": "recipes.json",
+      "pages": "Page 69 (Step 2 Section)",
+      "recipe_id": "tikka_masala_chicken",
+      "recipe_name": "Tikka Masala Chicken",
+      "question_type": "steps",
+      "step_number": 2
+    },
+    {
+      "id": 70,
+      "question": "What is step 3 in Fajitas Chicken?",
+      "answer": "Cook the main protein until golden and cooked through",
+      "document": "recipes.json",
+      "pages": "Page 70 (Step 3 Section)",
+      "recipe_id": "fajitas_chicken",
+      "recipe_name": "Fajitas Chicken",
+      "question_type": "steps",
+      "step_number": 3
+    },
+    {
+      "id": 71,
+      "question": "How long does step 1 take in Pudding Dessert?",
+      "answer": "5 minutes",
+      "document": "recipes.json",
+      "pages": "Page 71 (Step 1 Section)",
+      "recipe_id": "pudding_dessert",
+      "recipe_name": "Pudding Dessert",
+      "question_type": "steps",
+      "step_number": 1
+    },
+    {
+      "id": 72,
+      "question": "What is the instruction for step 3 of Arrabbiata Pasta?",
+      "answer": "Cook the main protein until golden and cooked through",
+      "document": "recipes.json",
+      "pages": "Page 72 (Step 3 Section)",
+      "recipe_id": "arrabbiata_pasta",
+      "recipe_name": "Arrabbiata Pasta",
+      "question_type": "steps",
+      "step_number": 3
+    },
+    {
+      "id": 73,
+      "question": "What tip is provided for step 1 in BBQ Burger?",
+      "answer": "Adjust seasoning to your preference",
+      "document": "recipes.json",
+      "pages": "Page 73 (Step 1 Tips Section)",
+      "recipe_id": "bbq_burger",
+      "recipe_name": "BBQ Burger",
+      "question_type": "steps",
+      "step_number": 1
+    },
+    {
+      "id": 74,
+      "question": "How many steps are in Alfredo Pasta?",
+      "answer": "8 steps",
+      "document": "recipes.json",
+      "pages": "Page 74 (Steps Section)",
+      "recipe_id": "alfredo_pasta",
+      "recipe_name": "Alfredo Pasta",
+      "question_type": "steps",
+      "step_number": 4
+    },
+    {
+      "id": 75,
+      "question": "Describe step 2 of Turkey Burger",
+      "answer": "Heat a large pan/skillet over medium-high heat (Takes 2 minutes)",
+      "document": "recipes.json",
+      "pages": "Page 75 (Step 2 Section)",
+      "recipe_id": "turkey_burger",
+      "recipe_name": "Turkey Burger",
+      "question_type": "steps",
+      "step_number": 2
+    },
+    {
+      "id": 76,
+      "question": "Which recipe takes longer to cook, Alfredo Chicken or Al Pastor Tacos?",
+      "answer": "Alfredo Chicken takes 34 minutes and Al Pastor Tacos takes 22 minutes",
+      "document": "recipes.json",
+      "pages": "Page 76 and Page 77 (Recipe Overview Sections)",
+      "recipe_id": "alfredo_chicken,al_pastor_tacos",
+      "recipe_name": "Alfredo Chicken, Al Pastor Tacos",
+      "question_type": "multi_recipe"
+    },
+    {
+      "id": 77,
+      "question": "Compare the difficulty levels of Al Pastor Tacos and Bean Tacos",
+      "answer": "Al Pastor Tacos is Medium difficulty, while Bean Tacos is Medium difficulty",
+      "document": "recipes.json",
+      "pages": "Page 77 and Page 78 (Recipe Overview Sections)",
+      "recipe_id": "al_pastor_tacos,bean_tacos",
+      "recipe_name": "Al Pastor Tacos, Bean Tacos",
+      "question_type": "multi_recipe"
+    },
+    {
+      "id": 78,
+      "question": "How many total servings can Bean Tacos and Chicago Deep Dish Pizza make together?",
+      "answer": "7 servings total (5 from Bean Tacos and 2 from Chicago Deep Dish Pizza)",
+      "document": "recipes.json",
+      "pages": "Page 78 and Page 79 (Recipe Overview Sections)",
+      "recipe_id": "bean_tacos,chicago_deep_dish_pizza",
+      "recipe_name": "Bean Tacos, Chicago Deep Dish Pizza",
+      "question_type": "multi_recipe"
+    },
+    {
+      "id": 79,
+      "question": "Which recipe takes longer to cook, Chicago Deep Dish Pizza or Pork Stir Fry?",
+      "answer": "Chicago Deep Dish Pizza takes 10 minutes and Pork Stir Fry takes 11 minutes",
+      "document": "recipes.json",
+      "pages": "Page 79 and Page 80 (Recipe Overview Sections)",
+      "recipe_id": "chicago_deep_dish_pizza,pork_stir_fry",
+      "recipe_name": "Chicago Deep Dish Pizza, Pork Stir Fry",
+      "question_type": "multi_recipe"
+    },
+    {
+      "id": 80,
+      "question": "Compare the difficulty levels of Pork Stir Fry and Tart Dessert",
+      "answer": "Pork Stir Fry is Medium difficulty, while Tart Dessert is Medium difficulty",
+      "document": "recipes.json",
+      "pages": "Page 80 and Page 81 (Recipe Overview Sections)",
+      "recipe_id": "pork_stir_fry,tart_dessert",
+      "recipe_name": "Pork Stir Fry, Tart Dessert",
+      "question_type": "multi_recipe"
+    },
+    {
+      "id": 81,
+      "question": "How many total servings can Tart Dessert and Vegetarian Tacos make together?",
+      "answer": "14 servings total (10 from Tart Dessert and 4 from Vegetarian Tacos)",
+      "document": "recipes.json",
+      "pages": "Page 81 and Page 82 (Recipe Overview Sections)",
+      "recipe_id": "tart_dessert,vegetarian_tacos",
+      "recipe_name": "Tart Dessert, Vegetarian Tacos",
+      "question_type": "multi_recipe"
+    },
+    {
+      "id": 82,
+      "question": "Which recipe takes longer to cook, Vegetarian Tacos or Mediterranean Salad?",
+      "answer": "Vegetarian Tacos takes 26 minutes and Mediterranean Salad takes 4 minutes",
+      "document": "recipes.json",
+      "pages": "Page 82 and Page 83 (Recipe Overview Sections)",
+      "recipe_id": "vegetarian_tacos,mediterranean_salad",
+      "recipe_name": "Vegetarian Tacos, Mediterranean Salad",
+      "question_type": "multi_recipe"
+    },
+    {
+      "id": 83,
+      "question": "Compare the difficulty levels of Mediterranean Salad and General Tso Stir Fry",
+      "answer": "Mediterranean Salad is Easy difficulty, while General Tso Stir Fry is Medium difficulty",
+      "document": "recipes.json",
+      "pages": "Page 83 and Page 84 (Recipe Overview Sections)",
+      "recipe_id": "mediterranean_salad,general_tso_stir_fry",
+      "recipe_name": "Mediterranean Salad, General Tso Stir Fry",
+      "question_type": "multi_recipe"
+    },
+    {
+      "id": 84,
+      "question": "How many total servings can General Tso Stir Fry and Beef Stir Fry make together?",
+      "answer": "6 servings total (4 from General Tso Stir Fry and 2 from Beef Stir Fry)",
+      "document": "recipes.json",
+      "pages": "Page 84 and Page 85 (Recipe Overview Sections)",
+      "recipe_id": "general_tso_stir_fry,beef_stir_fry",
+      "recipe_name": "General Tso Stir Fry, Beef Stir Fry",
+      "question_type": "multi_recipe"
+    },
+    {
+      "id": 85,
+      "question": "Which recipe takes longer to cook, Beef Stir Fry or Chicken Noodle Soup?",
+      "answer": "Beef Stir Fry takes 18 minutes and Chicken Noodle Soup takes 33 minutes",
+      "document": "recipes.json",
+      "pages": "Page 85 and Page 86 (Recipe Overview Sections)",
+      "recipe_id": "beef_stir_fry,chicken_noodle_soup",
+      "recipe_name": "Beef Stir Fry, Chicken Noodle Soup",
+      "question_type": "multi_recipe"
+    },
+    {
+      "id": 86,
+      "question": "What is the total time (prep + cook) for Chicken Noodle Soup?",
+      "answer": "Prep time: 12 minutes, Cook time: 33 minutes",
+      "document": "recipes.json",
+      "pages": "Page 86 (Recipe Overview Section)",
+      "recipe_id": "chicken_noodle_soup",
+      "recipe_name": "Chicken Noodle Soup",
+      "question_type": "timing"
+    },
+    {
+      "id": 87,
+      "question": "List all step durations for Marinara Pasta",
+      "answer": "5 minutes, 2 minutes, 8 minutes, 5 minutes, 2 minutes, 10 minutes, 1 minutes",
+      "document": "recipes.json",
+      "pages": "Page 87 (Steps Section)",
+      "recipe_id": "marinara_pasta",
+      "recipe_name": "Marinara Pasta",
+      "question_type": "timing"
+    },
+    {
+      "id": 88,
+      "question": "What is the total time (prep + cook) for Greek Salad?",
+      "answer": "Prep time: 10 minutes, Cook time: 0 minutes",
+      "document": "recipes.json",
+      "pages": "Page 88 (Recipe Overview Section)",
+      "recipe_id": "greek_salad",
+      "recipe_name": "Greek Salad",
+      "question_type": "timing"
+    },
+    {
+      "id": 89,
+      "question": "List all step durations for Spanish Rice",
+      "answer": "5 minutes, 2 minutes, 8 minutes, 5 minutes",
+      "document": "recipes.json",
+      "pages": "Page 89 (Steps Section)",
+      "recipe_id": "spanish_rice",
+      "recipe_name": "Spanish Rice",
+      "question_type": "timing"
+    },
+    {
+      "id": 90,
+      "question": "What is the total time (prep + cook) for Sticky Rice?",
+      "answer": "Prep time: 7 minutes, Cook time: 45 minutes",
+      "document": "recipes.json",
+      "pages": "Page 90 (Recipe Overview Section)",
+      "recipe_id": "sticky_rice",
+      "recipe_name": "Sticky Rice",
+      "question_type": "timing"
+    },
+    {
+      "id": 91,
+      "question": "List all step durations for Tomato Soup",
+      "answer": "5 minutes, 2 minutes, 8 minutes, 5 minutes, 2 minutes",
+      "document": "recipes.json",
+      "pages": "Page 91 (Steps Section)",
+      "recipe_id": "tomato_soup",
+      "recipe_name": "Tomato Soup",
+      "question_type": "timing"
+    },
+    {
+      "id": 92,
+      "question": "What is the total time (prep + cook) for Pie Dessert?",
+      "answer": "Prep time: 26 minutes, Cook time: 25 minutes",
+      "document": "recipes.json",
+      "pages": "Page 92 (Recipe Overview Section)",
+      "recipe_id": "pie_dessert",
+      "recipe_name": "Pie Dessert",
+      "question_type": "timing"
+    },
+    {
+      "id": 93,
+      "question": "List all step durations for Hawaiian Pizza",
+      "answer": "5 minutes, 2 minutes, 8 minutes, 5 minutes, 2 minutes, 10 minutes, 1 minutes",
+      "document": "recipes.json",
+      "pages": "Page 93 (Steps Section)",
+      "recipe_id": "hawaiian_pizza",
+      "recipe_name": "Hawaiian Pizza",
+      "question_type": "timing"
+    },
+    {
+      "id": 94,
+      "question": "What is the total time (prep + cook) for Aglio e Olio Pasta?",
+      "answer": "Prep time: 9 minutes, Cook time: 22 minutes",
+      "document": "recipes.json",
+      "pages": "Page 94 (Recipe Overview Section)",
+      "recipe_id": "aglio_e_olio_pasta",
+      "recipe_name": "Aglio e Olio Pasta",
+      "question_type": "timing"
+    },
+    {
+      "id": 95,
+      "question": "List all step durations for Chicken Burger",
+      "answer": "5 minutes, 2 minutes, 8 minutes, 5 minutes, 2 minutes, 10 minutes, 1 minutes",
+      "document": "recipes.json",
+      "pages": "Page 95 (Steps Section)",
+      "recipe_id": "chicken_burger",
+      "recipe_name": "Chicken Burger",
+      "question_type": "timing"
+    },
+    {
+      "id": 96,
+      "question": "Describe the cooking process for Shrimp Stir Fry",
+      "answer": "The recipe involves: Prepare all ingredients. Chop and prepare all ingr..., Heat a large pan/skillet over medium-high heat..., Cook the main protein until golden and cooked thro...",
+      "document": "recipes.json",
+      "pages": "Page 96 (Steps Section)",
+      "recipe_id": "shrimp_stir_fry",
+      "recipe_name": "Shrimp Stir Fry",
+      "question_type": "cooking_technique"
+    },
+    {
+      "id": 97,
+      "question": "Describe the cooking process for Black Bean Burger",
+      "answer": "The recipe involves: Prepare all ingredients. Chop and prepare all ingr..., Heat a large pan/skillet over medium-high heat..., Cook the main protein until golden and cooked thro...",
+      "document": "recipes.json",
+      "pages": "Page 97 (Steps Section)",
+      "recipe_id": "black_bean_burger",
+      "recipe_name": "Black Bean Burger",
+      "question_type": "cooking_technique"
+    },
+    {
+      "id": 98,
+      "question": "What cooking method is used in Chocolate Cake Dessert?",
+      "answer": "Stovetop cooking using a pan or skillet",
+      "document": "recipes.json",
+      "pages": "Page 98 (Steps Section)",
+      "recipe_id": "chocolate_cake_dessert",
+      "recipe_name": "Chocolate Cake Dessert",
+      "question_type": "cooking_technique"
+    },
+    {
+      "id": 99,
+      "question": "Describe the cooking process for Teriyaki Stir Fry",
+      "answer": "The recipe involves: Prepare all ingredients. Chop and prepare all ingr..., Heat a large pan/skillet over medium-high heat..., Cook the main protein until golden and cooked thro...",
+      "document": "recipes.json",
+      "pages": "Page 99 (Steps Section)",
+      "recipe_id": "teriyaki_stir_fry",
+      "recipe_name": "Teriyaki Stir Fry",
+      "question_type": "cooking_technique"
+    },
+    {
+      "id": 100,
+      "question": "What cooking method is used in Piccata Chicken?",
+      "answer": "Stovetop cooking using a pan or skillet",
+      "document": "recipes.json",
+      "pages": "Page 100 (Steps Section)",
+      "recipe_id": "piccata_chicken",
+      "recipe_name": "Piccata Chicken",
+      "question_type": "cooking_technique"
+    }
+  ]
+}

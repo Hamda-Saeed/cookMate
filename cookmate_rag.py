@@ -43,7 +43,6 @@ import sounddevice as sd
 import numpy as np
 from scipy.io.wavfile import write
 
-# Ollama for local LLM (best free option)
 import requests
 
 # Load environment variables

@@ -417,7 +417,7 @@ class CookMateRAG:
             metadata={"hnsw:space": "cosine"}
         )
         
-        # Prepare documents
+        
         documents = []
         embeddings = []
         metadatas = []

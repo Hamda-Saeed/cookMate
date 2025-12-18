@@ -674,7 +674,6 @@ Ingredients:
         if query_type == "off_topic":
             response = "I'm CookMate, your cooking assistant! 🍳 I help with recipes, ingredients, and cooking techniques. What would you like to cook today?"
         
-        # Handle based on type
         elif query_type == "navigation":
             # NEW: Handle "last step" specifically
             if "last step" in query_lower:

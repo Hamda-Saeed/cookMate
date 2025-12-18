@@ -88,7 +88,7 @@ def main():
     print_section("Step 3: Initializing Evaluator")
     evaluator = RAGEvaluator()
     
-    # Step 4: Evaluate RAG model
+    # Step 4: Evaluate RAG model to get bleu rouge scores exact match partial match
     print_section("Step 4: Evaluating RAG Model")
     print("Running RAG model on all questions...")
     print("   This may take several minutes...\n")

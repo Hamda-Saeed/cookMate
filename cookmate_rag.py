@@ -114,7 +114,7 @@ class GroqLLM:
         
         """Get Groq API key from environment or user input"""
         import os
-        api_key = os.getenv("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")
+        api_key = os.getenv("")
         if not api_key:
             print("🔑 Please set your Groq API key:")
             print("   1. Get free API key from: https://console.groq.com/keys")
@@ -313,11 +313,11 @@ class CookMateRAG:
     
         print("🧠 Loading embedding model...")
         self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
-    
+        #step 1
         print("🔹 Preparing recipe embeddings...")
         self.recipe_chunks = []
         self._prepare_recipe_chunks()
-  
+        #step 2 
         print("💾 Setting up vector database...")
         self.chroma_client = chromadb.Client(Settings(
         anonymized_telemetry=False,

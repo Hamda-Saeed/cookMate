@@ -520,7 +520,6 @@ Ingredients:
                 ids.append(f"doc_{doc_id}")
                 doc_id += 1
         
-        # Generate embeddings
         embeddings = self.embedding_model.encode(documents).tolist()
         
         # Add to collection

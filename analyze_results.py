@@ -88,7 +88,7 @@ print(f"\n📊 Questions with low semantic similarity (<0.2):")
 print(f"   RAG: {rag_low_sim}/100 ({rag_low_sim}%)")
 print(f"   Baseline: {baseline_low_sim}/100 ({baseline_low_sim}%)")
 
-# Best and worst performing questions
+# Best and worst performing questions for testing
 print("\n=== BEST PERFORMING QUESTIONS (RAG) ===")
 top_rag = rag.nlargest(5, 'semantic_similarity')[['question_id', 'semantic_similarity', 'rougeL', 'latency']]
 for idx, row in top_rag.iterrows():

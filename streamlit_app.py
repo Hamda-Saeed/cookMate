@@ -102,7 +102,7 @@ with st.sidebar:
     
     st.divider()
     
-    # Available recipes
+    # Available recipes fetched from dataset
     st.header("📚 Available Recipes")
     recipes = st.session_state.cookmate.recipes
     for recipe_id, recipe in recipes.items():
